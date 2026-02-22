@@ -205,9 +205,10 @@ def create_app():
             canonical_url=canonical_url
         )
 
-    return app
+        return app
 
+# Create app for gunicorn / render
+app = create_app()
 
 if __name__ == "__main__":
-    app = create_app()
     app.run(debug=True)
