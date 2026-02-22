@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, abort, Response
 from datetime import datetime
 from models import db, Provider
 from slugify import slugify  
+import os, json
 
 def create_app():
     app = Flask(__name__)
@@ -12,6 +13,19 @@ def create_app():
 
     with app.app_context():
         db.create_all()
+
+        # Seed DB (Render) if empty
+    if Provider.query.count() == 0:
+        seed_path = os.path.join(os.path.dirname(__file__), "providers_seed.json")
+        if os.path.exists(seed_path):
+            with open(seed_path, "r", encoding="utf-8") as f:
+                seed = json.load(f)
+            for row in seed:
+                db.session.add(Provider(**row))
+            db.session.commit()
+            print(f"Seeded {len(seed)} providers from providers_seed.json")
+        else:
+            print("providers_seed.json not found; skipping seed")
 
     @app.route("/")
     def home():
