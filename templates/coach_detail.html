@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ p.provider_name }}{% endblock %}
+
+{% block content %}
+<a class="small" href="/coaches">← Back to directory</a>
+
+<div class="card">
+  <h1>{{ p.provider_name }}</h1>
+  <p class="small">
+    {% if p.primary_sport %}<span class="badge">{{ p.primary_sport }}</span>{% endif %}
+    <span class="badge">Juniors</span>
+    {% if p.offers_remote %}<span class="badge">Remote</span>{% endif %}
+  </p>
+
+  {% if p.city or p.state %}
+    <p><strong>Location:</strong> {{ (p.city or '') }}{% if p.city and p.state %}, {% endif %}{{ (p.state or '') }}</p>
+  {% endif %}
+
+  {% if p.short_description %}
+    <p>{{ p.short_description }}</p>
+  {% endif %}
+
+  {% if p.focus_tags %}
+    <p><strong>Focus areas:</strong> {{ p.focus_tags }}</p>
+  {% endif %}
+
+  {% if p.website_url %}
+    <p><a class="btn" href="{{ p.website_url }}" target="_blank" rel="noopener">Visit Website</a></p>
+  {% endif %}
+</div>
+{% endblock %}

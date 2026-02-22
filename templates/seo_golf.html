@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Junior Golf Mental Coach | Sports Psychology for Youth Golfers{% endblock %}
+
+{% block content %}
+
+<h1>Junior Golf Mental Coaches</h1>
+
+<p class="lead">
+Find mental performance coaches and sports psychologists who work with competitive junior golfers.
+Compare providers offering confidence training, pressure management, and tournament mindset support.
+</p>
+
+<div class="cta">
+  <a class="btn" href="/coaches?tag=golf">Browse all golf providers</a>
+  <a class="btn secondary" href="/for-providers">Coaches: Get Listed</a>
+</div>
+
+<div class="card">
+  <h2>Why Junior Golfers Struggle Mentally</h2>
+  <ul>
+    <li>Great practice rounds that don’t translate to tournaments</li>
+    <li>Fear of personal best rounds</li>
+    <li>First-round stiffness and slow starts</li>
+    <li>Confidence crashes after mistakes</li>
+    <li>Score awareness causing tension</li>
+  </ul>
+
+  <p class="small muted">
+    The providers below specialize in helping junior athletes build repeatable mental routines and competitive confidence.
+  </p>
+</div>
+
+<h2>{{ total }} Golf-Relevant Providers</h2>
+
+{% if providers %}
+  <div class="list">
+    {% for p in providers %}
+      <div class="card">
+        <div class="row">
+          <div>
+            <h3 class="h3">
+              <a href="/coach/{{ p.slug }}">{{ p.provider_name }}</a>
+            </h3>
+
+            <p class="small">
+              {% if p.primary_sport %}
+                <span class="badge">{{ p.primary_sport }}</span>
+              {% endif %}
+              {% if p.offers_remote %}
+                <span class="badge">Remote</span>
+              {% endif %}
+              {% if p.city or p.state %}
+                <span class="muted">
+                  • {{ (p.city or '') }}{% if p.city and p.state %}, {% endif %}{{ (p.state or '') }}
+                </span>
+              {% endif %}
+            </p>
+
+            {% if p.short_description %}
+              <p>{{ p.short_description }}</p>
+            {% endif %}
+
+            {% if p.focus_tags %}
+              <p class="small muted">
+                Focus: {{ p.focus_tags }}
+              </p>
+            {% endif %}
+          </div>
+
+          <div class="right">
+            <a class="btn" href="/coach/{{ p.slug }}">View</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="card">
+    <p>No golf-related providers found yet. Check back soon.</p>
+  </div>
+{% endif %}
+
+<div class="card">
+  <h2>For Parents of Competitive Junior Golfers</h2>
+  <p>
+    Mental performance training can help junior golfers transfer their range performance to tournament scoring.
+    Look for providers experienced with youth athletes, pressure routines, and confidence rebuilding after mistakes.
+  </p>
+</div>
+
+{% endblock %}

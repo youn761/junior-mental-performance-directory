@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Junior Mental Performance Finder{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Find Mental Performance Coaches for Junior Athletes</h1>
+  <p class="lead">
+    Compare sports psychology and mental game specialists who work with competitive juniors — including golf-focused coaches and remote options.
+  </p>
+  <div class="cta">
+    <a class="btn" href="/coaches">Browse Coaches</a>
+    <a class="btn secondary" href="/for-providers">Coaches: Get Listed</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>{{ total }}</strong><span>Coaches listed</span></div>
+    <div class="stat"><strong>{{ remote_count }}</strong><span>Remote options</span></div>
+    <div class="stat"><strong>{{ golf_count }}</strong><span>Golf-focused</span></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>When Talent Rises, Pressure Follows</h2>
+  <ul>
+    <li>Tournament nerves and confidence crashes</li>
+    <li>Practice scores don’t translate to competition</li>
+    <li>Fear of personal best rounds → self-destruct</li>
+    <li>Mental blocks that appear “out of nowhere”</li>
+    <li>Parents unsure who truly specializes in juniors</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Find the Right Fit Faster</h2>
+  <div class="grid3">
+    <div>
+      <h3>Junior Specialists</h3>
+      <p>Prioritize coaches who work with youth and competitive juniors.</p>
+    </div>
+    <div>
+      <h3>Sport Focus</h3>
+      <p>Filter for golf mental performance or multi-sport specialists.</p>
+    </div>
+    <div>
+      <h3>Remote Options</h3>
+      <p>Many providers work virtually — not just in your city.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Popular Starting Points</h2>
+  <div class="chips">
+    <a class="chip" href="/tag/golf">Junior Golf Mental Coaches</a>
+    <a class="chip" href="/tag/remote-coaching">Remote Coaches</a>
+    <a class="chip" href="/tag/confidence">Confidence Training</a>
+    <a class="chip" href="/tag/fear-of-failure">Fear of Failure Help</a>
+  </div>
+</section>
+
+{% endblock %}

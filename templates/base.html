@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Junior Mental Performance Finder{% endblock %}</title>
+  <link rel="stylesheet" href="/static/site.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="/">Junior Mental Performance Finder</a>
+      <nav class="nav">
+        <a href="/coaches">Browse Coaches</a>
+        <a href="/for-providers">For Providers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="small">
+        Disclaimer: This directory is for informational purposes and does not provide medical advice.
+        Always evaluate providers for fit and credentials.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

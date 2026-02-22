@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Flask
+instance/
+*.db
+
+# Excel temp files
+~$*.xlsx
+
+# Raw data (keep out of repo)
+*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
