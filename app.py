@@ -35,6 +35,10 @@ def create_app():
         golf_count = Provider.query.filter(Provider.focus_tags.ilike("%golf%")).count()
         return render_template("home.html", total=total, remote_count=remote_count, golf_count=golf_count)
 
+    @app.route("/google97be0a8a5049ff8f.html")
+    def google_verify():
+        return app.send_static_file("google97be0a8a5049ff8f.html")
+
     @app.route("/sitemap.xml")
     def sitemap():
         """
