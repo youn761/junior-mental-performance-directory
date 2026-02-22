@@ -32,7 +32,7 @@ def create_app():
         # small “proof it’s real” stats
         total = Provider.query.count()
         remote_count = Provider.query.filter_by(offers_remote=True).count()
-        golf_count = Provider.query.filter(Provider.primary_sport.ilike("%golf%")).count()
+        golf_count = Provider.query.filter(Provider.focus_tags.ilike("%golf%")).count()
         return render_template("home.html", total=total, remote_count=remote_count, golf_count=golf_count)
 
     @app.route("/sitemap.xml")
