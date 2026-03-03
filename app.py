@@ -3,6 +3,7 @@ from datetime import datetime
 from models import db, Provider
 from slugify import slugify
 import os, json
+from sqlalchemy import or_
 
 
 # ----------------------------
@@ -38,144 +39,95 @@ KNOWN_PROBLEMS = {
 # These are “what do they help you build / skills / approach?”
 KNOWN_EXPERTISE = {
     "confidence", "focus", "resilience", "motivation", "mindset", "leadership",
-    "consistency", "mental toughness", "visualization", "mental skills",
-    "performance routines", "team culture", "character development", "life skills",
-    "parent guidance", "parent education", "well-being", "high-performance",
-    "elite performance", "trauma-informed", "trauma", "mindfulness",
-    "goal setting", "emotional regulation",
+    "mental toughness", "visualization", "grit", "consistency", "pressure handling",
+    "goal setting", "mindfulness", "team culture",
 }
 
-def _clean_token(t: str) -> str:
-    t = (t or "").strip().lower()
-    t = t.replace("–", "-").replace("-", "-")
-    t = " ".join(t.split())
+
+def normalize_tag(t: str) -> str:
+    if not t:
+        return ""
+    t = t.strip().lower()
+    t = SPORT_SYNONYMS.get(t, t)
     return t
 
-def split_csv_tags(tag_string: str):
-    if not tag_string:
+
+def split_tags(s: str):
+    if not s:
         return []
-    parts = [p.strip() for p in tag_string.split(",")]
-    return [p for p in parts if p]
+    parts = [p.strip() for p in str(s).replace(";", ",").split(",")]
+    parts = [p for p in parts if p]
+    # normalize + de-dupe
+    seen = set()
+    out = []
+    for p in parts:
+        n = normalize_tag(p)
+        if n and n not in seen:
+            seen.add(n)
+            out.append(n)
+    return out
 
-def normalize_sport_token(t: str) -> str:
-    t = _clean_token(t)
-    if t in SPORT_SYNONYMS:
-        return SPORT_SYNONYMS[t]
-    if t == "multisport":
-        return "multi-sport"
-    return t
 
-def guess_3_tags_from_focus(focus_tags: str, primary_sport: str = None):
+def guess_3_tags_from_focus(focus_tags: str, primary_sport: str):
     """
-    Takes the old single 'focus_tags' blob and maps into:
-      - sport_tags
-      - problem_tags
-      - expertise_tags
+    Best-effort conversion when seed rows are still using legacy focus_tags.
 
-    This is intentionally conservative: unknowns go to expertise (unless clearly sport/problem).
+    Returns: (sport_tags, problem_tags, expertise_tags) as comma-separated strings.
     """
-    raw = split_csv_tags(focus_tags)
-    sport = []
-    prob = []
-    exp = []
+    raw = split_tags(focus_tags)
+    sport = set()
+    prob = set()
+    exp = set()
 
-    for token in raw:
-        t = _clean_token(token)
-        if not t:
+    # primary sport should count as sport tag too (when provided)
+    ps = normalize_tag(primary_sport)
+    if ps:
+        sport.add(ps)
+
+    for t in raw:
+        # sport match
+        if t in KNOWN_SPORTS:
+            sport.add(t)
             continue
 
-        # normalize common sport synonyms
-        t_norm_sport = normalize_sport_token(t)
-
-        # sport detection (including "field hockey")
-        if t_norm_sport in KNOWN_SPORTS:
-            sport.append(t_norm_sport)
-            continue
-
-        # problem detection
+        # problem match
         if t in KNOWN_PROBLEMS:
-            prob.append(t)
+            # normalize some common variants into canonical
+            if t == "return from injury":
+                t = "injury recovery"
+            if t == "recruiting stress":
+                t = "recruiting"
+            prob.add(t)
             continue
 
-        # expertise detection
+        # expertise match
         if t in KNOWN_EXPERTISE:
-            exp.append(t)
+            exp.add(t)
             continue
 
-        # a few heuristic catches
+        # heuristics / fallbacks
         if "injury" in t:
-            prob.append("injury recovery")
-        elif "anx" in t:
-            prob.append("anxiety")
+            prob.add("injury recovery")
         elif "recruit" in t:
-            prob.append("recruiting")
+            prob.add("recruiting")
+        elif "anx" in t or "nerv" in t or "pressure" in t:
+            prob.add("anxiety")
+        elif "focus" in t:
+            exp.add("focus")
+        elif "conf" in t:
+            exp.add("confidence")
+        elif "resil" in t:
+            exp.add("resilience")
+        elif "motiv" in t:
+            exp.add("motivation")
         else:
-            exp.append(t)
+            # if unknown, put it in expertise by default so it still shows up
+            exp.add(t)
 
-    # If no sport tags were found, fall back to primary_sport or multi-sport
-    ps = normalize_sport_token(primary_sport or "")
-    if not sport:
-        if ps and _clean_token(ps) not in {"", "none"}:
-            # if they put "Multi-sport" with a weird hyphen, normalize it
-            ps_clean = normalize_sport_token(ps)
-            sport = [ps_clean] if ps_clean else ["multi-sport"]
-        else:
-            sport = ["multi-sport"]
+    def join(s):
+        return ", ".join(sorted(s))
 
-    # de-dupe while preserving order
-    def dedupe(items):
-        seen = set()
-        out = []
-        for x in items:
-            x = _clean_token(x)
-            if not x:
-                continue
-            # normalize multi sport spelling
-            if x == "multisport":
-                x = "multi-sport"
-            if x not in seen:
-                seen.add(x)
-                out.append(x)
-        return out
-
-    sport = dedupe(sport)
-    prob = dedupe(prob)
-    exp = dedupe(exp)
-
-    return (", ".join(sport), ", ".join(prob), ", ".join(exp))
-
-
-# ----------------------------
-# SQLite safety: add missing columns if DB existed before schema change
-# ----------------------------
-
-def ensure_provider_columns(app: Flask):
-    """
-    If Render is using a persistent sqlite DB that was created before the new columns,
-    SQLAlchemy create_all() will NOT add columns. This guard adds them if missing.
-    """
-    with app.app_context():
-        # only run if table exists
-        try:
-            res = db.session.execute(db.text("SELECT name FROM sqlite_master WHERE type='table' AND name='providers';")).fetchone()
-            if not res:
-                return
-            cols = db.session.execute(db.text("PRAGMA table_info(providers);")).fetchall()
-            existing = {c[1] for c in cols}
-
-            # Add new columns if missing
-            if "sport_tags" not in existing:
-                db.session.execute(db.text("ALTER TABLE providers ADD COLUMN sport_tags VARCHAR(512);"))
-            if "problem_tags" not in existing:
-                db.session.execute(db.text("ALTER TABLE providers ADD COLUMN problem_tags VARCHAR(512);"))
-            if "expertise_tags" not in existing:
-                db.session.execute(db.text("ALTER TABLE providers ADD COLUMN expertise_tags VARCHAR(512);"))
-
-            # (Optional) keep focus_tags if it exists from old builds; we just ignore it now.
-            db.session.commit()
-        except Exception as e:
-            # Don't hard-fail deploy because of a harmless migration attempt
-            print(f"[warn] ensure_provider_columns skipped: {e}")
+    return join(sport), join(prob), join(exp)
 
 
 # ----------------------------
@@ -184,20 +136,41 @@ def ensure_provider_columns(app: Flask):
 
 def create_app():
     app = Flask(__name__)
-
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///directory.db"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)
 
+    # ----------------------------
+    # Lightweight migration helper: add new columns if missing
+    # ----------------------------
+    def ensure_provider_columns():
+        # SQLite "ALTER TABLE ADD COLUMN" is safe if the column doesn't exist.
+        # We'll check existing columns first.
+        try:
+            insp = db.inspect(db.engine)
+            cols = {c["name"] for c in insp.get_columns("providers")}
+        except Exception:
+            return
+
+        alters = []
+        if "sport_tags" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN sport_tags VARCHAR(512)")
+        if "problem_tags" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN problem_tags VARCHAR(512)")
+        if "expertise_tags" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN expertise_tags VARCHAR(512)")
+
+        if alters:
+            with db.engine.begin() as conn:
+                for sql in alters:
+                    conn.exec_driver_sql(sql)
+
     with app.app_context():
         db.create_all()
+        ensure_provider_columns()
 
-    # Ensure new columns exist if DB pre-dates your schema change
-    ensure_provider_columns(app)
-
-    # Seed DB if empty (supports either new 3-tag JSON OR old focus_tags JSON)
-    with app.app_context():
+        # Seed once if DB is empty
         if Provider.query.count() == 0:
             seed_path = os.path.join(os.path.dirname(__file__), "providers_seed.json")
             if os.path.exists(seed_path):
@@ -205,12 +178,8 @@ def create_app():
                     seed = json.load(f)
 
                 for row in seed:
-                    # Backward compatible: if the JSON still uses focus_tags, derive the 3 tag fields
-                    sport_tags = row.get("sport_tags")
-                    problem_tags = row.get("problem_tags")
-                    expertise_tags = row.get("expertise_tags")
-
-                    if not (sport_tags or problem_tags or expertise_tags):
+                    # If the new tag fields are missing, try to derive them from focus_tags
+                    if not row.get("sport_tags") and not row.get("problem_tags") and not row.get("expertise_tags"):
                         st, pt, et = guess_3_tags_from_focus(
                             focus_tags=row.get("focus_tags", ""),
                             primary_sport=row.get("primary_sport", "")
@@ -234,7 +203,6 @@ def create_app():
             else:
                 print("providers_seed.json not found; skipping seed")
 
-
     # ----------------------------
     # Routes
     # ----------------------------
@@ -256,18 +224,17 @@ def create_app():
 
     @app.route("/coaches")
     def coaches():
+        # New 3-tag filters
         sport = (request.args.get("sport") or "").strip()
-        remote = (request.args.get("remote") or "").strip()  # "1" => True filter
         problem = (request.args.get("problem") or "").strip()
         expertise = (request.args.get("expertise") or "").strip()
+        remote = (request.args.get("remote") or "").strip()  # "1" => True filter
 
-        # Backward compatibility: old "tag" param
-        legacy_tag = (request.args.get("tag") or "").strip()
-        if legacy_tag and not (problem or expertise):
-            expertise = legacy_tag
+        # Backward compatibility: old single "tag" param from the UI (coaches.html)
+        # Treat it as a generic tag filter across sport/problem/expertise.
+        tag = (request.args.get("tag") or "").strip()
 
         q = Provider.query
-
         # juniors-first
         q = q.filter_by(works_with_juniors=True)
 
@@ -277,20 +244,29 @@ def create_app():
         if remote == "1":
             q = q.filter_by(offers_remote=True)
 
-        if problem:
-            q = q.filter(Provider.problem_tags.ilike(f"%{problem}%"))
-
-        if expertise:
-            q = q.filter(Provider.expertise_tags.ilike(f"%{expertise}%"))
+        # If the legacy tag dropdown is used (and no specific 3-tag filter is selected),
+        # match that tag across ALL 3 tag columns so the old UI still works.
+        if tag and not (problem or expertise):
+            q = q.filter(or_(
+                Provider.sport_tags.ilike(f"%{tag}%"),
+                Provider.problem_tags.ilike(f"%{tag}%"),
+                Provider.expertise_tags.ilike(f"%{tag}%")
+            ))
+        else:
+            if problem:
+                q = q.filter(Provider.problem_tags.ilike(f"%{problem}%"))
+            if expertise:
+                q = q.filter(Provider.expertise_tags.ilike(f"%{expertise}%"))
 
         providers = q.order_by(Provider.provider_name.asc()).all()
 
-        # Build filter options from DB
+        # Build filter options from DB (only juniors-first providers)
         def unique_sorted(items):
             return sorted(set([i for i in items if i]))
 
-        all_providers = Provider.query.all()
+        all_providers = Provider.query.filter_by(works_with_juniors=True).all()
 
+        # sport dropdown is driven by sport_tags (not primary_sport)
         sport_opts = set()
         problem_opts = set()
         expertise_opts = set()
@@ -306,16 +282,23 @@ def create_app():
         problems = unique_sorted(list(problem_opts))
         expertises = unique_sorted(list(expertise_opts))
 
+        # Legacy "Focus tag" dropdown: show the union of all tags so it remains useful
+        tags = unique_sorted(list(problem_opts | expertise_opts | sport_opts))
+
         return render_template(
             "coaches.html",
             providers=providers,
             sports=sports,
-            problems=problems,
-            expertises=expertises,
+            tags=tags,
             selected_sport=sport,
             selected_remote=(remote == "1"),
+            selected_tag=tag,
+
+            # keep these for future template upgrades (3 dropdowns)
+            problems=problems,
+            expertises=expertises,
             selected_problem=problem,
-            selected_expertise=expertise
+            selected_expertise=expertise,
         )
 
     @app.route("/coach/<slug>")
@@ -328,7 +311,6 @@ def create_app():
     @app.route("/for-providers")
     def for_providers():
         return render_template("for_providers.html")
-
 
     # ----------------------------
     # SEO routes (3-category approach)
@@ -347,105 +329,83 @@ def create_app():
                 tags = p.sport_tags_list()
             elif category == "problem":
                 tags = p.problem_tags_list()
-            else:
+            elif category == "expertise":
                 tags = p.expertise_tags_list()
+            else:
+                tags = []
 
             for t in tags:
                 if slugify(t) == tag_slug:
                     matches.append(p)
                     break
 
-        matches.sort(key=lambda x: (x.provider_name or "").lower())
         return matches
 
-    def render_seo_tag_page(category: str, tag_slug: str):
-        providers = providers_matching_slug(category, tag_slug)
-        tag_text = tag_slug.replace("-", " ").strip()
-        tag_title = tag_text.title()
-
-        if category == "sport":
-            page_title = f"Junior {tag_title} Mental Performance Coaches"
-            h1 = f"Junior {tag_title} Mental Performance Coaches"
-            canonical_url = f"/sport/{slugify(tag_text)}"
-        elif category == "problem":
-            page_title = f"{tag_title} Help for Junior Athletes | Mental Performance Coaches"
-            h1 = f"Coaches Helping Junior Athletes With {tag_title}"
-            canonical_url = f"/problem/{slugify(tag_text)}"
-        else:
-            page_title = f"{tag_title} Training for Junior Athletes | Mental Performance Coaches"
-            h1 = f"{tag_title} Coaches for Junior Athletes"
-            canonical_url = f"/expertise/{slugify(tag_text)}"
-
-        # Reuse your existing seo template (you can keep seo_tag.html)
+    @app.route("/sport/<tag_slug>")
+    def seo_sport(tag_slug):
+        providers = providers_matching_slug("sport", tag_slug)
+        tag_text = tag_slug.replace("-", " ").title()
+        page_title = f"{tag_text} Mental Performance Coaches for Juniors"
+        h1 = f"{tag_text} Mental Performance Coaches"
         return render_template(
             "seo_tag.html",
             providers=providers,
-            total=len(providers),
-            tag_title=tag_title,
-            tag_text=tag_text,
-            tag_slug=slugify(tag_text),
             page_title=page_title,
             h1=h1,
-            canonical_url=canonical_url,
-            category=category
+            tag_title=tag_text,
+            tag_text=tag_text,
+            category="sport",
         )
 
-    @app.route("/sport/<sport_slug>")
-    def seo_sport(sport_slug):
-        return render_seo_tag_page("sport", sport_slug)
+    @app.route("/problem/<tag_slug>")
+    def seo_problem(tag_slug):
+        providers = providers_matching_slug("problem", tag_slug)
+        tag_text = tag_slug.replace("-", " ").title()
+        page_title = f"{tag_text} Sports Psychology Support for Juniors"
+        h1 = f"{tag_text} Sports Psychology Support"
+        return render_template(
+            "seo_tag.html",
+            providers=providers,
+            page_title=page_title,
+            h1=h1,
+            tag_title=tag_text,
+            tag_text=tag_text,
+            category="problem",
+        )
 
-    @app.route("/problem/<problem_slug>")
-    def seo_problem(problem_slug):
-        return render_seo_tag_page("problem", problem_slug)
-
-    @app.route("/expertise/<expertise_slug>")
-    def seo_expertise(expertise_slug):
-        return render_seo_tag_page("expertise", expertise_slug)
-
-
-    # ----------------------------
-    # Sitemap (core + coaches + 3 SEO families)
-    # ----------------------------
+    @app.route("/expertise/<tag_slug>")
+    def seo_expertise(tag_slug):
+        providers = providers_matching_slug("expertise", tag_slug)
+        tag_text = tag_slug.replace("-", " ").title()
+        page_title = f"{tag_text} Mental Skills Coaches for Juniors"
+        h1 = f"{tag_text} Mental Skills Coaches"
+        return render_template(
+            "seo_tag.html",
+            providers=providers,
+            page_title=page_title,
+            h1=h1,
+            tag_title=tag_text,
+            tag_text=tag_text,
+            category="expertise",
+        )
 
     @app.route("/sitemap.xml")
     def sitemap():
-        base_url = request.url_root.rstrip("/")
-        today = datetime.utcnow().date().isoformat()
+        """
+        Generate a simple XML sitemap with:
+          - homepage
+          - coaches listing
+          - 3 tag-family SEO pages
+        """
+        base = request.url_root.rstrip("/")
 
-        urls = []
-
-        core_paths = [
-            "/",
-            "/coaches",
-            "/for-providers",
-        ]
-
-        for path in core_paths:
-            urls.append({
-                "loc": f"{base_url}{path}",
-                "lastmod": today,
-                "changefreq": "weekly",
-                "priority": "0.8" if path == "/" else "0.6",
-            })
-
-        providers = Provider.query.order_by(Provider.provider_name.asc()).all()
-
-        # Coach pages
-        for p in providers:
-            if p.slug:
-                urls.append({
-                    "loc": f"{base_url}/coach/{p.slug}",
-                    "lastmod": today,
-                    "changefreq": "monthly",
-                    "priority": "0.7",
-                })
-
-        # SEO tag pages: collect unique slugs across all 3 categories
+        # Collect all tags from juniors-first providers
+        all_providers = Provider.query.filter_by(works_with_juniors=True).all()
         sport_slugs = set()
         problem_slugs = set()
         expertise_slugs = set()
 
-        for p in providers:
+        for p in all_providers:
             for t in p.sport_tags_list():
                 sport_slugs.add(slugify(t))
             for t in p.problem_tags_list():
@@ -453,52 +413,31 @@ def create_app():
             for t in p.expertise_tags_list():
                 expertise_slugs.add(slugify(t))
 
+        urls = [
+            f"{base}/",
+            f"{base}/coaches",
+        ]
         for s in sorted(sport_slugs):
-            urls.append({
-                "loc": f"{base_url}/sport/{s}",
-                "lastmod": today,
-                "changefreq": "weekly",
-                "priority": "0.6",
-            })
-
+            urls.append(f"{base}/sport/{s}")
         for s in sorted(problem_slugs):
-            urls.append({
-                "loc": f"{base_url}/problem/{s}",
-                "lastmod": today,
-                "changefreq": "weekly",
-                "priority": "0.6",
-            })
-
+            urls.append(f"{base}/problem/{s}")
         for s in sorted(expertise_slugs):
-            urls.append({
-                "loc": f"{base_url}/expertise/{s}",
-                "lastmod": today,
-                "changefreq": "weekly",
-                "priority": "0.6",
-            })
+            urls.append(f"{base}/expertise/{s}")
 
-        # XML render
-        xml_items = []
-        xml_items.append('<?xml version="1.0" encoding="UTF-8"?>')
-        xml_items.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+        lastmod = datetime.utcnow().date().isoformat()
 
+        xml = ['<?xml version="1.0" encoding="UTF-8"?>',
+               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
         for u in urls:
-            xml_items.append("  <url>")
-            xml_items.append(f"    <loc>{u['loc']}</loc>")
-            xml_items.append(f"    <lastmod>{u['lastmod']}</lastmod>")
-            xml_items.append(f"    <changefreq>{u['changefreq']}</changefreq>")
-            xml_items.append(f"    <priority>{u['priority']}</priority>")
-            xml_items.append("  </url>")
+            xml.append("  <url>")
+            xml.append(f"    <loc>{u}</loc>")
+            xml.append(f"    <lastmod>{lastmod}</lastmod>")
+            xml.append("  </url>")
+        xml.append("</urlset>")
 
-        xml_items.append("</urlset>")
-        xml = "\n".join(xml_items)
-        return Response(xml, mimetype="application/xml")
+        return Response("\n".join(xml), mimetype="application/xml")
 
     return app
 
 
-# Gunicorn / Render entrypoint
 app = create_app()
-
-if __name__ == "__main__":
-    app.run(debug=True)
