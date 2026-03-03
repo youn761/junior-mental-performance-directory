@@ -7,12 +7,20 @@
 <h1>{{ h1 }}</h1>
 
 <p class="lead">
-Browse mental performance coaches and sports psychology providers related to <strong>{{ tag_title }}</strong>.
-Many support competitive juniors and offer remote sessions.
+  Browse mental performance coaches and sports psychology providers related to <strong>{{ tag_title }}</strong>.
+  Many support competitive juniors and offer remote sessions.
 </p>
 
+{# Build the right browse link based on which SEO family this page is in #}
+{% set browse_qs = "expertise=" ~ tag_text %}
+{% if category == "sport" %}
+  {% set browse_qs = "sport=" ~ tag_text %}
+{% elif category == "problem" %}
+  {% set browse_qs = "problem=" ~ tag_text %}
+{% endif %}
+
 <div class="cta">
-  <a class="btn" href="/coaches?tag={{ tag_text }}">Browse all {{ tag_title }} providers</a>
+  <a class="btn" href="/coaches?{{ browse_qs }}">Browse all {{ tag_title }} providers</a>
   <a class="btn secondary" href="/for-providers">Coaches: Get Listed</a>
 </div>
 
@@ -36,6 +44,7 @@ Many support competitive juniors and offer remote sessions.
         <div class="row">
           <div>
             <h3 class="h3"><a href="/coach/{{ p.slug }}">{{ p.provider_name }}</a></h3>
+
             <p class="small">
               {% if p.primary_sport %}<span class="badge">{{ p.primary_sport }}</span>{% endif %}
               {% if p.offers_remote %}<span class="badge">Remote</span>{% endif %}
@@ -43,9 +52,21 @@ Many support competitive juniors and offer remote sessions.
                 <span class="muted"> • {{ (p.city or '') }}{% if p.city and p.state %}, {% endif %}{{ (p.state or '') }}</span>
               {% endif %}
             </p>
+
             {% if p.short_description %}<p>{{ p.short_description }}</p>{% endif %}
-            {% if p.focus_tags %}<p class="small muted">Focus: {{ p.focus_tags }}</p>{% endif %}
+
+            {# New 3-tag display #}
+            {% if p.sport_tags %}
+              <p class="small muted"><strong>Sports:</strong> {{ p.sport_tags }}</p>
+            {% endif %}
+            {% if p.problem_tags %}
+              <p class="small muted"><strong>Problems:</strong> {{ p.problem_tags }}</p>
+            {% endif %}
+            {% if p.expertise_tags %}
+              <p class="small muted"><strong>Expertise:</strong> {{ p.expertise_tags }}</p>
+            {% endif %}
           </div>
+
           <div class="right">
             <a class="btn" href="/coach/{{ p.slug }}">View</a>
           </div>
@@ -56,7 +77,7 @@ Many support competitive juniors and offer remote sessions.
 {% else %}
   <div class="card">
     <p>No providers found for <strong>{{ tag_title }}</strong> yet.</p>
-    <p class="small muted">If you add this tag to providers in your spreadsheet and re-import, they’ll appear here automatically.</p>
+    <p class="small muted">If you add this tag to providers and re-import, they’ll appear here automatically.</p>
   </div>
 {% endif %}
 
