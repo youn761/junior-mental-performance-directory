@@ -15,19 +15,29 @@
     </select>
   </label>
 
-  <label class="checkbox">
-    <input type="checkbox" name="remote" value="1" {% if selected_remote %}checked{% endif %}>
-    Remote available
+  <label>
+    Problem tag
+    <select name="problem">
+      <option value="">All</option>
+      {% for t in problems %}
+        <option value="{{ t }}" {% if selected_problem == t %}selected{% endif %}>{{ t }}</option>
+      {% endfor %}
+    </select>
   </label>
 
   <label>
-    Focus tag
-    <select name="tag">
+    Expertise tag
+    <select name="expertise">
       <option value="">All</option>
-      {% for t in tags %}
-        <option value="{{ t }}" {% if selected_tag == t %}selected{% endif %}>{{ t }}</option>
+      {% for t in expertises %}
+        <option value="{{ t }}" {% if selected_expertise == t %}selected{% endif %}>{{ t }}</option>
       {% endfor %}
     </select>
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" name="remote" value="1" {% if selected_remote %}checked{% endif %}>
+    Remote available
   </label>
 
   <button class="btn" type="submit">Apply</button>
@@ -42,16 +52,32 @@
       <div class="row">
         <div>
           <h2 class="h3"><a href="/coach/{{ p.slug }}">{{ p.provider_name }}</a></h2>
+
           <p class="small">
             {% if p.primary_sport %}<span class="badge">{{ p.primary_sport }}</span>{% endif %}
             {% if p.offers_remote %}<span class="badge">Remote</span>{% endif %}
-            {% if p.city or p.state %}<span class="muted"> • {{ (p.city or '') }}{% if p.city and p.state %}, {% endif %}{{ (p.state or '') }}</span>{% endif %}
+
+            {# prevent "nan" showing #}
+            {% set city = p.city if p.city and p.city != 'nan' else '' %}
+            {% set state = p.state if p.state and p.state != 'nan' else '' %}
+            {% if city or state %}
+              <span class="muted"> • {{ city }}{% if city and state %}, {% endif %}{{ state }}</span>
+            {% endif %}
           </p>
+
           {% if p.short_description %}<p>{{ p.short_description }}</p>{% endif %}
-          {% if p.focus_tags %}
-            <p class="small muted">Focus: {{ p.focus_tags }}</p>
+
+          {% if p.sport_tags %}
+            <p class="small muted"><strong>Sports:</strong> {{ p.sport_tags }}</p>
+          {% endif %}
+          {% if p.problem_tags %}
+            <p class="small muted"><strong>Problems:</strong> {{ p.problem_tags }}</p>
+          {% endif %}
+          {% if p.expertise_tags %}
+            <p class="small muted"><strong>Expertise:</strong> {{ p.expertise_tags }}</p>
           {% endif %}
         </div>
+
         <div class="right">
           <a class="btn" href="/coach/{{ p.slug }}">View</a>
         </div>
