@@ -21,15 +21,27 @@ class Provider(db.Model):
     state = db.Column(db.String(40), nullable=True)
 
     short_description = db.Column(db.Text, nullable=True)
-    focus_tags = db.Column(db.String(512), nullable=True)  # comma-separated tags
+    sport_tags = db.Column(db.String(512), nullable=True)      # comma-separated
+    problem_tags = db.Column(db.String(512), nullable=True)    # comma-separated
+    expertise_tags = db.Column(db.String(512), nullable=True)  # comma-separated
 
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
     __table_args__ = (
         Index("ix_providers_sport_remote", "primary_sport", "offers_remote"),
+        Index("ix_providers_remote", "offers_remote"),
     )
 
-    def tags_list(self):
-        if not self.focus_tags:
+    def _split_tags(self, s):
+        if not s:
             return []
-        return [t.strip() for t in self.focus_tags.split(",") if t.strip()]
+        return [t.strip() for t in s.split(",") if t.strip()]
+
+    def sport_tags_list(self):
+        return self._split_tags(self.sport_tags)
+
+    def problem_tags_list(self):
+        return self._split_tags(self.problem_tags)
+
+    def expertise_tags_list(self):
+        return self._split_tags(self.expertise_tags)
