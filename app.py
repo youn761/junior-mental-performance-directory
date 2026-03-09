@@ -491,13 +491,22 @@ def create_app():
             urls.append(f"{base}/expertise/{e}")
 
         # combo pages
+        combo_count = 0
+
         for s in sorted(sport_slugs):
             for p in sorted(problem_slugs):
                 if providers_matching_combo(sport_slug=s, problem_slug=p):
                     urls.append(f"{base}/sport/{s}/problem/{p}")
+                    combo_count += 1
+
             for e in sorted(expertise_slugs):
                 if providers_matching_combo(sport_slug=s, expertise_slug=e):
                     urls.append(f"{base}/sport/{s}/expertise/{e}")
+                    combo_count += 1
+
+        print(f"Sitemap base pages: {len(urls) - combo_count}")
+        print(f"Sitemap combo pages: {combo_count}")
+        print(f"Sitemap total urls: {len(urls)}")
 
         lastmod = datetime.utcnow().date().isoformat()
 
