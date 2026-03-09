@@ -341,6 +341,30 @@ def create_app():
 
         return matches
 
+    def tag_text_from_slug(slug: str) -> str:
+        return slug.replace("-", " ").title()
+
+
+    def providers_matching_combo(sport_slug: str, problem_slug: str = None, expertise_slug: str = None):
+        all_providers = Provider.query.filter_by(works_with_juniors=True).all()
+        matches = []
+
+        for p in all_providers:
+            sport_match = any(slugify(t) == sport_slug for t in p.sport_tags_list())
+
+            problem_match = True
+            if problem_slug:
+                problem_match = any(slugify(t) == problem_slug for t in p.problem_tags_list())
+
+            expertise_match = True
+            if expertise_slug:
+                expertise_match = any(slugify(t) == expertise_slug for t in p.expertise_tags_list())
+
+            if sport_match and problem_match and expertise_match:
+                matches.append(p)
+
+        return matches
+
     @app.route("/sport/<tag_slug>")
     def seo_sport(tag_slug):
         providers = providers_matching_slug("sport", tag_slug)
@@ -389,6 +413,48 @@ def create_app():
             category="expertise",
         )
 
+    @app.route("/sport/<sport_slug>/problem/<problem_slug>")
+    def seo_sport_problem(sport_slug, problem_slug):
+        providers = providers_matching_combo(sport_slug=sport_slug, problem_slug=problem_slug)
+
+        sport_text = tag_text_from_slug(sport_slug)
+        problem_text = tag_text_from_slug(problem_slug)
+
+        page_title = f"{problem_text} Mental Performance Coaches for {sport_text} Athletes"
+        h1 = f"{problem_text} Support for {sport_text} Athletes"
+
+        return render_template(
+            "seo_tag.html",
+            providers=providers,
+            page_title=page_title,
+            h1=h1,
+            tag_title=f"{problem_text} • {sport_text}",
+            tag_text=f"{problem_text} for {sport_text}",
+            category="problem",
+        )
+
+
+    @app.route("/sport/<sport_slug>/expertise/<expertise_slug>")
+    def seo_sport_expertise(sport_slug, expertise_slug):
+        providers = providers_matching_combo(sport_slug=sport_slug, expertise_slug=expertise_slug)
+
+        sport_text = tag_text_from_slug(sport_slug)
+        expertise_text = tag_text_from_slug(expertise_slug)
+
+        page_title = f"{expertise_text} Coaches for {sport_text} Athletes"
+        h1 = f"{expertise_text} Coaching for {sport_text} Athletes"
+
+        return render_template(
+            "seo_tag.html",
+            providers=providers,
+            page_title=page_title,
+            h1=h1,
+            tag_title=f"{expertise_text} • {sport_text}",
+            tag_text=f"{expertise_text} for {sport_text}",
+            category="expertise",
+        )
+
+
     @app.route("/sitemap.xml")
     def sitemap():
         """
@@ -419,10 +485,19 @@ def create_app():
         ]
         for s in sorted(sport_slugs):
             urls.append(f"{base}/sport/{s}")
-        for s in sorted(problem_slugs):
-            urls.append(f"{base}/problem/{s}")
-        for s in sorted(expertise_slugs):
-            urls.append(f"{base}/expertise/{s}")
+        for p in sorted(problem_slugs):
+            urls.append(f"{base}/problem/{p}")
+        for e in sorted(expertise_slugs):
+            urls.append(f"{base}/expertise/{e}")
+
+        # combo pages
+        for s in sorted(sport_slugs):
+            for p in sorted(problem_slugs):
+                if providers_matching_combo(sport_slug=s, problem_slug=p):
+                    urls.append(f"{base}/sport/{s}/problem/{p}")
+            for e in sorted(expertise_slugs):
+                if providers_matching_combo(sport_slug=s, expertise_slug=e):
+                    urls.append(f"{base}/sport/{s}/expertise/{e}")
 
         lastmod = datetime.utcnow().date().isoformat()
 
