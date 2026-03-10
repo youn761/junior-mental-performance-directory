@@ -4,6 +4,22 @@
 
 {% block content %}
 
+<nav class="breadcrumbs small">
+  <a href="/">Home</a>
+
+  {% if "•" in tag_title %}
+    {% set parts = tag_title.split("•") %}
+    {% set first = parts[0].strip() %}
+    {% set second = parts[1].strip() %}
+
+    &gt; <a href="/sport/{{ slugify(second) }}">{{ second }}</a>
+    &gt; <span>{{ first }}</span>
+
+  {% else %}
+    &gt; <span>{{ tag_title }}</span>
+  {% endif %}
+</nav>
+
 <h1>{{ h1 }}</h1>
 
 <p class="lead">
