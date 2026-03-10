@@ -67,15 +67,32 @@
 
           {% if p.short_description %}<p>{{ p.short_description }}</p>{% endif %}
 
-          {% if p.sport_tags %}
-            <p class="small muted"><strong>Sports:</strong> {{ p.sport_tags }}</p>
+          {% if p.sport_tags_list() %}
+            <p class="small muted">
+              <strong>Sports:</strong>
+              {% for tag in p.sport_tags_list() %}
+                <a href="/sport/{{ slugify(tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+              {% endfor %}
+             </p>
           {% endif %}
-          {% if p.problem_tags %}
-            <p class="small muted"><strong>Problems:</strong> {{ p.problem_tags }}</p>
-          {% endif %}
-          {% if p.expertise_tags %}
-            <p class="small muted"><strong>Expertise:</strong> {{ p.expertise_tags }}</p>
-          {% endif %}
+
+          {% if p.problem_tags_list() %}
+             <p class="small muted">
+               <strong>Problems:</strong>
+               {% for tag in p.problem_tags_list() %}
+                 <a href="/problem/{{ slugify(tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+               {% endfor %}
+              </p>
+           {% endif %}
+
+           {% if p.expertise_tags_list() %}
+              <p class="small muted">
+                <strong>Expertise:</strong>
+                {% for tag in p.expertise_tags_list() %}
+                  <a href="/expertise/{{ slugify(tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+               </p>
+            {% endif %}
         </div>
 
         <div class="right">
