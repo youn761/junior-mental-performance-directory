@@ -136,6 +136,7 @@ def guess_3_tags_from_focus(focus_tags: str, primary_sport: str):
 
 def create_app():
     app = Flask(__name__)
+    app.jinja_env.globals.update(slugify=slugify)
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///directory.db"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
