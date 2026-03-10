@@ -346,12 +346,14 @@ def create_app():
         return slug.replace("-", " ").title()
 
 
-    def providers_matching_combo(sport_slug: str, problem_slug: str = None, expertise_slug: str = None):
+    def providers_matching_combo(sport_slug: str = None, problem_slug: str = None, expertise_slug: str = None):
         all_providers = Provider.query.filter_by(works_with_juniors=True).all()
         matches = []
 
         for p in all_providers:
-            sport_match = any(slugify(t) == sport_slug for t in p.sport_tags_list())
+            sport_match = True
+            if sport_slug:
+                sport_match = any(slugify(t) == sport_slug for t in p.sport_tags_list())
 
             problem_match = True
             if problem_slug:
@@ -455,6 +457,28 @@ def create_app():
             category="expertise",
         )
 
+    @app.route("/problem/<problem_slug>/expertise/<expertise_slug>")
+    def seo_problem_expertise(problem_slug, expertise_slug):
+        providers = providers_matching_combo(
+            problem_slug=problem_slug,
+            expertise_slug=expertise_slug
+        )
+
+        problem_text = tag_text_from_slug(problem_slug)
+        expertise_text = tag_text_from_slug(expertise_slug)
+
+        page_title = f"{expertise_text} Coaching for {problem_text}"
+        h1 = f"{expertise_text} Coaching for {problem_text}"
+
+        return render_template(
+            "seo_tag.html",
+            providers=providers,
+            page_title=page_title,
+            h1=h1,
+            tag_title=f"{expertise_text} • {problem_text}",
+            tag_text=f"{expertise_text} support for {problem_text}",
+            category="expertise",
+        )
 
     @app.route("/sitemap.xml")
     def sitemap():
@@ -503,6 +527,12 @@ def create_app():
             for e in sorted(expertise_slugs):
                 if providers_matching_combo(sport_slug=s, expertise_slug=e):
                     urls.append(f"{base}/sport/{s}/expertise/{e}")
+                    combo_count += 1
+
+        for p in sorted(problem_slugs):
+            for e in sorted(expertise_slugs):
+                if providers_matching_combo(problem_slug=p, expertise_slug=e):
+                    urls.append(f"{base}/problem/{p}/expertise/{e}")
                     combo_count += 1
 
         print(f"Sitemap base pages: {len(urls) - combo_count}")
