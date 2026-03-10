@@ -36,3 +36,17 @@ body { font-family: system-ui, Arial, sans-serif; margin: 0; color: #111; backgr
 .stats { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
 .stat { background: #fff; border: 1px solid #e6e6e6; border-radius: 14px; padding: 10px 14px; }
 .stat strong { font-size: 1.3rem; display: block; }
+
+.breadcrumbs {
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.breadcrumbs a {
+  color: #444;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
