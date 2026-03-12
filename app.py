@@ -155,6 +155,8 @@ def create_app():
             return
 
         alters = []
+        if "email" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN email VARCHAR(255)")
         if "sport_tags" not in cols:
             alters.append("ALTER TABLE providers ADD COLUMN sport_tags VARCHAR(512)")
         if "problem_tags" not in cols:

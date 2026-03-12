@@ -12,6 +12,7 @@ class Provider(db.Model):
     slug = db.Column(db.String(255), nullable=False, unique=True, index=True)
 
     website_url = db.Column(db.String(1024), nullable=True)
+    email = db.Column(db.String(255), nullable=True)
 
     primary_sport = db.Column(db.String(80), nullable=True)  # Golf, Multi-sport, etc.
     works_with_juniors = db.Column(db.Boolean, nullable=False, default=True)
