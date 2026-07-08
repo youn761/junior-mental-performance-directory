@@ -4,6 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Junior Mental Performance Finder{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Find sports psychologists and mental performance coaches who specialize in competitive junior athletes, including golf-focused and remote providers.{% endblock %}">
+  <link rel="canonical" href="{{ request.url }}">
+
+  <meta property="og:title" content="{% block og_title %}Junior Mental Performance Finder{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Find sports psychologists and mental performance coaches who specialize in competitive junior athletes.{% endblock %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ request.url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/static/site.css">
 </head>
 <body>
