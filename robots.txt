@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://junior-mental-performance-directory.onrender.com/sitemap.xml

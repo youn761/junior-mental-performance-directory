@@ -6,6 +6,7 @@
 
 <div class="card">
   <h1>{{ p.provider_name }}</h1>
+
   <p class="small">
     {% if p.primary_sport %}<span class="badge">{{ p.primary_sport }}</span>{% endif %}
     <span class="badge">Juniors</span>
@@ -18,6 +19,33 @@
 
   {% if p.short_description %}
     <p>{{ p.short_description }}</p>
+  {% endif %}
+
+  {% if p.sport_tags_list() %}
+    <p>
+      <strong>Sports:</strong>
+      {% for tag in p.sport_tags_list() %}
+        <a href="/sport/{{ slugify(tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {% if p.problem_tags_list() %}
+    <p>
+      <strong>Problems:</strong>
+      {% for tag in p.problem_tags_list() %}
+        <a href="/problem/{{ slugify(tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {% if p.expertise_tags_list() %}
+    <p>
+      <strong>Expertise:</strong>
+      {% for tag in p.expertise_tags_list() %}
+        <a href="/expertise/{{ slugify(tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
   {% endif %}
 
   {% if p.focus_tags %}
