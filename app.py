@@ -232,6 +232,7 @@ def create_app():
         problem = (request.args.get("problem") or "").strip()
         expertise = (request.args.get("expertise") or "").strip()
         remote = (request.args.get("remote") or "").strip()  # "1" => True filter
+        name_query = (request.args.get("q") or "").strip()
 
         # Backward compatibility: old single "tag" param from the UI (coaches.html)
         # Treat it as a generic tag filter across sport/problem/expertise.
@@ -240,6 +241,9 @@ def create_app():
         q = Provider.query
         # juniors-first
         q = q.filter_by(works_with_juniors=True)
+
+        if name_query:
+            q = q.filter(Provider.provider_name.ilike(f"%{name_query}%"))
 
         if sport:
             q = q.filter(Provider.sport_tags.ilike(f"%{sport}%"))
@@ -296,6 +300,7 @@ def create_app():
             selected_sport=sport,
             selected_remote=(remote == "1"),
             selected_tag=tag,
+            selected_query=name_query,
 
             # keep these for future template upgrades (3 dropdowns)
             problems=problems,

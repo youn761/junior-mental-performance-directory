@@ -6,6 +6,11 @@
 
 <form class="filters" method="get" action="/coaches">
   <label>
+    Search by name
+    <input type="text" name="q" value="{{ selected_query or '' }}" placeholder="e.g. Dr. Smith">
+  </label>
+
+  <label>
     Sport
     <select name="sport">
       <option value="">All</option>
