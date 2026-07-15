@@ -5,7 +5,7 @@ from slugify import slugify
 YES_VALUES = {"y", "yes", "true", "1", "t"}
 
 def to_bool(val, default=False):
-    if val is None:
+    if val is None or pd.isna(val):
         return default
     s = str(val).strip().lower()
     if s == "":
@@ -42,8 +42,8 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
         new_cols[c] = col_map.get(key, c)
     return df.rename(columns=new_cols)
 
-def export_seed(excel_path: str, out_path: str = "providers_seed.json"):
-    df = pd.read_excel(excel_path)
+def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_name: str = "full table"):
+    df = pd.read_excel(excel_path, sheet_name=sheet_name)
     df = normalize_columns(df)
 
     if "provider_name" not in df.columns:
@@ -52,10 +52,16 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json"):
     # Build seed records (no DB access required)
     records = []
     used_slugs = set()
+    skipped_invalid = 0
 
     for _, row in df.iterrows():
         name = str(row.get("provider_name", "")).strip()
         if not name:
+            continue
+
+        # Skip providers not explicitly marked valid (blank = not yet vetted, excluded)
+        if not to_bool(row.get("Valid_flag"), default=False):
+            skipped_invalid += 1
             continue
 
         website_url = str(row.get("website_url", "")).strip() or None
@@ -94,6 +100,8 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json"):
         json.dump(records, f, ensure_ascii=False, indent=2)
 
     print(f"Exported {len(records)} records -> {out_path}")
+    if skipped_invalid:
+        print(f"Skipped {skipped_invalid} record(s) marked invalid (Valid_flag = No)")
 
 if __name__ == "__main__":
-    export_seed("listing 001.xlsx", "providers_seed.json")
+    export_seed("listing_001.xlsx", "providers_seed.json", sheet_name="full table")
