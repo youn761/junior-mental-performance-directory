@@ -163,6 +163,8 @@ def create_app():
             alters.append("ALTER TABLE providers ADD COLUMN problem_tags VARCHAR(512)")
         if "expertise_tags" not in cols:
             alters.append("ALTER TABLE providers ADD COLUMN expertise_tags VARCHAR(512)")
+        if "photo_filename" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN photo_filename VARCHAR(255)")
 
         if alters:
             with db.engine.begin() as conn:
@@ -195,7 +197,7 @@ def create_app():
                     allowed = {
                         "provider_name", "slug", "website_url", "primary_sport", "works_with_juniors",
                         "offers_remote", "city", "state", "short_description",
-                        "sport_tags", "problem_tags", "expertise_tags"
+                        "sport_tags", "problem_tags", "expertise_tags", "photo_filename"
                     }
                     clean_row = {k: v for k, v in row.items() if k in allowed}
 

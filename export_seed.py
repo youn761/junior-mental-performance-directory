@@ -12,6 +12,14 @@ def to_bool(val, default=False):
         return default
     return s in YES_VALUES
 
+def clean_str(val):
+    """Convert a cell value to a stripped string, or None if blank/NaN.
+    Guards against pandas NaN cells becoming the literal string 'nan'."""
+    if val is None or pd.isna(val):
+        return None
+    s = str(val).strip()
+    return s or None
+
 def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
     col_map = {
         "provider name": "provider_name",
@@ -34,6 +42,9 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
         "focus tags": "focus_tags",
         "tags": "focus_tags",
         "focus areas": "focus_tags",
+        "photo filename": "photo_filename",
+        "photo": "photo_filename",
+        "photo_filename": "photo_filename",
     }
 
     new_cols = {}
@@ -55,7 +66,7 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_na
     skipped_invalid = 0
 
     for _, row in df.iterrows():
-        name = str(row.get("provider_name", "")).strip()
+        name = clean_str(row.get("provider_name")) or ""
         if not name:
             continue
 
@@ -64,16 +75,17 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_na
             skipped_invalid += 1
             continue
 
-        website_url = str(row.get("website_url", "")).strip() or None
-        primary_sport = str(row.get("primary_sport", "")).strip() or None
+        website_url = clean_str(row.get("website_url"))
+        primary_sport = clean_str(row.get("primary_sport"))
 
         works_with_juniors = to_bool(row.get("works_with_juniors", "Y"), default=True)
         offers_remote = to_bool(row.get("offers_remote", "N"), default=False)
 
-        city = str(row.get("city", "")).strip() or None
-        state = str(row.get("state", "")).strip() or None
-        short_description = str(row.get("short_description", "")).strip() or None
-        focus_tags = str(row.get("focus_tags", "")).strip() or None
+        city = clean_str(row.get("city"))
+        state = clean_str(row.get("state"))
+        short_description = clean_str(row.get("short_description"))
+        focus_tags = clean_str(row.get("focus_tags"))
+        photo_filename = clean_str(row.get("photo_filename"))
 
         base_slug = slugify(name)
         slug = base_slug
@@ -94,6 +106,7 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_na
             "state": state,
             "short_description": short_description,
             "focus_tags": focus_tags,
+            "photo_filename": photo_filename,
         })
 
     with open(out_path, "w", encoding="utf-8") as f:

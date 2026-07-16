@@ -9,7 +9,8 @@
     "city": "San Francisco Bay Area",
     "state": "California, US",
     "short_description": "Olympic‑level sport psychologist and former elite triathlete providing video and in‑office mental coaching, including specialized programs for young athletes.drjoann​",
-    "focus_tags": "Visualization, nerves, elite performance,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "focus_tags": "Visualization, nerves, elite performance,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
+    "photo_filename": null
   },
   {
     "provider_name": "Mind Body Endurance – Telehealth Sport Psychologists",
@@ -21,7 +22,8 @@
     "city": "Telehealth",
     "state": "US",
     "short_description": "Group of sport psychologists offering telehealth to athletes across the US, including youth athlete mental health sessions and performance support.mindbodyendurance​",
-    "focus_tags": "mental health, performance, well‑being,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "focus_tags": "mental health, performance, well‑being,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Andrew Jacobs",
@@ -33,7 +35,8 @@
     "city": "Overland Park (KC area)",
     "state": "Kansas, US",
     "short_description": "Veteran sport psychologist known for radio, consulting, and work with youth through professional athletes; provides individual sessions and remote work.winnersunlimited​",
-    "focus_tags": "confidence, focus,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "focus_tags": "confidence, focus,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
+    "photo_filename": null
   },
   {
     "provider_name": "Aspire Mindset – Mental Performance Coaching for Youth & College Athletes",
@@ -45,7 +48,8 @@
     "city": "Online",
     "state": "US",
     "short_description": "Short Description: Aspire Mindset provides mental performance coaching for youth and college athletes from a variety of sports through remote sessions, focusing on confidence, focus, and consistency under pressure.",
-    "focus_tags": "focus, remote coaching,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "focus_tags": "focus, remote coaching,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
+    "photo_filename": null
   },
   {
     "provider_name": "Better Performance – Dr. Christina Heilman",
@@ -57,7 +61,8 @@
     "city": "Jackson",
     "state": "Wyoming, US",
     "short_description": "Sport psychologist and coach integrating mental skills, positive psychology, and resilience work with youth through elite athletes.",
-    "focus_tags": "resilience, enjoyment, fear of failure, mental toughness,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "focus_tags": "resilience, enjoyment, fear of failure, mental toughness,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
+    "photo_filename": null
   },
   {
     "provider_name": "Compete Mentality – Dr. Haley Perlus",
@@ -69,19 +74,21 @@
     "city": "(Primarily virtual; based in) Colorado",
     "state": "Colorado, US",
     "short_description": "Sport and performance psychologist offering one‑on‑one coaching and programs for youth and teen athletes and their parents via online sessions.",
-    "focus_tags": "motivation, competitive mindset, nerves, consistency, parent education,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "focus_tags": "motivation, competitive mindset, nerves, consistency, parent education,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
+    "photo_filename": null
   },
   {
-    "provider_name": "MindRight Sport Psychology – Dr. Jason Novetsky",
-    "slug": "mindright-sport-psychology-dr-jason-novetsky",
-    "website_url": "https://www.mindrightpsyc.com",
+    "provider_name": "Champion Mindset Group – Dr. Jason Novetsky",
+    "slug": "champion-mindset-group-dr-jason-novetsky",
+    "website_url": "https://champmindset.com",
     "primary_sport": "Multi‑sport",
     "works_with_juniors": true,
     "offers_remote": true,
     "city": "Detroit area",
     "state": "Michigan, US",
-    "short_description": "Mental performance coaching practice serving youth, high‑school, and collegiate athletes and teams, with parent‑focused education.",
-    "focus_tags": "focus, handling mistakes, parents, team workshops, performance routines,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "short_description": "Dr. Jason Novetsky is the Founder of Champion Mindset Group, helping athletes, coaches, teams, and performers develop the mental skills to perform their best under pressure. Over 14+ years he has worked with professional athletes, 50+ NCAA Division I athletes, national champions, elite youth competitors, coaches, executives, and more. A former NCAA Division I All-Conference baseball pitcher (University of Detroit) and 25+ year school psychologist, he teaches athletes to think productively under pressure, regulate emotions, and build resilient identities.",
+    "focus_tags": "confidence development, performance anxiety, pressure management, attention control, focus, emotional regulation, self-talk, competition routines, visualization, resilience, identity, injury rehab, leadership, team culture, parent education, college recruiting mindset, peak performance",
+    "photo_filename": "jason-novetsky.jpg"
   },
   {
     "provider_name": "Winning Within Sports Psychology – Dr. Chris Carr & Associates",
@@ -93,7 +100,8 @@
     "city": "Indianapolis",
     "state": "Indiana, US",
     "short_description": "Sport psychology practice blending clinical and performance services for children, adolescents, and adult athletes.",
-    "focus_tags": "Anxiety, depression, performance issues, injury, family, coping skills.,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball"
+    "focus_tags": "Anxiety, depression, performance issues, injury, family, coping skills.,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Sari Shepphird",
@@ -105,19 +113,8 @@
     "city": "Los Angeles",
     "state": "California, US",
     "short_description": "Body image, judged sports (dance/gymnastics)",
-    "focus_tags": "Body image, judged sports (dance/gymnastics)"
-  },
-  {
-    "provider_name": "Dr. Jason Novetsky",
-    "slug": "dr-jason-novetsky",
-    "website_url": "https://www.google.com/search?q=mindrightpsyc.com",
-    "primary_sport": "Multi-sport",
-    "works_with_juniors": true,
-    "offers_remote": true,
-    "city": "Detroit",
-    "state": "Michigan, US",
-    "short_description": "Focus, handling mistakes, youth workshops",
-    "focus_tags": "Focus, handling mistakes, youth workshops"
+    "focus_tags": "Body image, judged sports (dance/gymnastics)",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Justin Ross",
@@ -129,7 +126,8 @@
     "city": "Denver",
     "state": "Colorado, US",
     "short_description": "Performance routines, teen athlete anxiety",
-    "focus_tags": "Performance routines, teen athlete anxiety"
+    "focus_tags": "Performance routines, teen athlete anxiety",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Cindra Kamphoff",
@@ -141,7 +139,8 @@
     "city": "Mankato",
     "state": "Minnesota, US",
     "short_description": "Grit, leadership for young athletes",
-    "focus_tags": "Grit, leadership for young athletes"
+    "focus_tags": "Grit, leadership for young athletes",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Matthew Flynn",
@@ -151,9 +150,10 @@
     "works_with_juniors": true,
     "offers_remote": true,
     "city": "Virtual",
-    "state": "nan",
+    "state": null,
     "short_description": "Clinical skills for high-achieving youth",
-    "focus_tags": "Clinical skills for high-achieving youth"
+    "focus_tags": "Clinical skills for high-achieving youth",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Chris Carr",
@@ -165,7 +165,8 @@
     "city": "Indianapolis",
     "state": "Indiana, US",
     "short_description": "Pacer’s team psych, youth clinical focus",
-    "focus_tags": "Pacer’s team psych, youth clinical focus"
+    "focus_tags": "Pacer’s team psych, youth clinical focus",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. R. Kweku Amoasi",
@@ -177,7 +178,8 @@
     "city": "Milwaukee",
     "state": "Wisconsin, US",
     "short_description": "Trauma-informed youth performance",
-    "focus_tags": "Trauma-informed youth performance"
+    "focus_tags": "Trauma-informed youth performance",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Caroline Silby",
@@ -189,7 +191,8 @@
     "city": "Annapolis",
     "state": "Maryland, US",
     "short_description": "High-pressure, US Figure Skating lead, elite youth",
-    "focus_tags": "High-pressure, US Figure Skating lead, elite youth"
+    "focus_tags": "High-pressure, US Figure Skating lead, elite youth",
+    "photo_filename": null
   },
   {
     "provider_name": "Robert Andrews",
@@ -201,7 +204,8 @@
     "city": "Houston",
     "state": "Texas, US",
     "short_description": "Trauma, Simone Biles’ consultant, youth mental blocks",
-    "focus_tags": "Trauma, Simone Biles’ consultant, youth mental blocks"
+    "focus_tags": "Trauma, Simone Biles’ consultant, youth mental blocks",
+    "photo_filename": null
   },
   {
     "provider_name": "Abby Keenan (Intrepid Performance)",
@@ -213,7 +217,8 @@
     "city": "Savannah",
     "state": "Georgia, US",
     "short_description": "CMPC, military-style resilience for youth athletes",
-    "focus_tags": "CMPC, military-style resilience for youth athletes"
+    "focus_tags": "CMPC, military-style resilience for youth athletes",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Riley Nickols",
@@ -225,7 +230,8 @@
     "city": "St. Louis",
     "state": "Missouri, US",
     "short_description": "Eating disorders in youth sport, RED-S, endurance",
-    "focus_tags": "Eating disorders in youth sport, RED-S, endurance"
+    "focus_tags": "Eating disorders in youth sport, RED-S, endurance",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Brian Hemmings",
@@ -237,7 +243,8 @@
     "city": "UK",
     "state": "United Kingdom",
     "short_description": "Junior golf and cricket performance psychology",
-    "focus_tags": "Junior golf and cricket performance psychology"
+    "focus_tags": "Junior golf and cricket performance psychology",
+    "photo_filename": null
   },
   {
     "provider_name": "Prof. Chris Harwood",
@@ -249,7 +256,8 @@
     "city": "UK",
     "state": "United Kingdom",
     "short_description": "Parent-athlete relationship, youth tennis specialist",
-    "focus_tags": "Parent-athlete relationship, youth tennis specialist"
+    "focus_tags": "Parent-athlete relationship, youth tennis specialist",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Vanessa Chafos",
@@ -261,7 +269,8 @@
     "city": "Princeton",
     "state": "New Jersey, US",
     "short_description": "Youth goal setting, inner strength building",
-    "focus_tags": "Youth goal setting, inner strength building"
+    "focus_tags": "Youth goal setting, inner strength building",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Judy VanRaalte",
@@ -273,7 +282,8 @@
     "city": "Sedona",
     "state": "Arizona, US",
     "short_description": "School/sport balance, performance anxiety",
-    "focus_tags": "School/sport balance, performance anxiety"
+    "focus_tags": "School/sport balance, performance anxiety",
+    "photo_filename": null
   },
   {
     "provider_name": "Emily Marcinowski",
@@ -285,7 +295,8 @@
     "city": "Ohio",
     "state": "Ohio, US",
     "short_description": "High school/JO travel volleyball focus",
-    "focus_tags": "High school/JO travel volleyball focus"
+    "focus_tags": "High school/JO travel volleyball focus",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Paul McCarthy",
@@ -297,7 +308,8 @@
     "city": "UK (Virtual)",
     "state": "United Kingdom",
     "short_description": "Adolescent mistake management, regulation",
-    "focus_tags": "Adolescent mistake management, regulation"
+    "focus_tags": "Adolescent mistake management, regulation",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Andrew Lane",
@@ -309,7 +321,8 @@
     "city": "UK",
     "state": "United Kingdom",
     "short_description": "Emotional regulation in junior endurance sport",
-    "focus_tags": "Emotional regulation in junior endurance sport"
+    "focus_tags": "Emotional regulation in junior endurance sport",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Dana Voelker",
@@ -321,7 +334,8 @@
     "city": "Morgantown",
     "state": "West Virginia, US",
     "short_description": "Body image",
-    "focus_tags": "female youth athletes"
+    "focus_tags": "female youth athletes",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Nicole Detling",
@@ -333,7 +347,8 @@
     "city": "Salt Lake City",
     "state": "Utah, US",
     "short_description": "Olympic-bound juniors",
-    "focus_tags": "fear/mental blocks"
+    "focus_tags": "fear/mental blocks",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Lindsey Hamilton",
@@ -345,7 +360,8 @@
     "city": "Bradenton",
     "state": "Florida, US",
     "short_description": "Elite academy development",
-    "focus_tags": "mental toughness"
+    "focus_tags": "mental toughness",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Jamie Shapiro",
@@ -357,7 +373,8 @@
     "city": "Denver",
     "state": "Colorado, US",
     "short_description": "Youth gymnastics",
-    "focus_tags": "body image"
+    "focus_tags": "body image",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Jim Taylor",
@@ -369,7 +386,8 @@
     "city": "San Francisco",
     "state": "California, US",
     "short_description": "Prime Sport for youth/junior competitors",
-    "focus_tags": "nan"
+    "focus_tags": null,
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Josephine Perry",
@@ -381,7 +399,8 @@
     "city": "London",
     "state": "United Kingdom",
     "short_description": "Youth endurance",
-    "focus_tags": "anxiety"
+    "focus_tags": "anxiety",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Jennifer Carter",
@@ -393,7 +412,8 @@
     "city": "Columbus",
     "state": "Ohio, US",
     "short_description": "Teen athlete mental health",
-    "focus_tags": "eating disorders"
+    "focus_tags": "eating disorders",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Graig Chow",
@@ -405,7 +425,8 @@
     "city": "Berkeley",
     "state": "California, US",
     "short_description": "Mental health integration for student-athletes",
-    "focus_tags": "nan"
+    "focus_tags": null,
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Richard Gordin",
@@ -417,7 +438,8 @@
     "city": "Logan",
     "state": "Utah, US",
     "short_description": "Junior Olympic prep",
-    "focus_tags": "concentration"
+    "focus_tags": "concentration",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Monna Arvinen-Barrow",
@@ -429,7 +451,8 @@
     "city": "Milwaukee",
     "state": "Wisconsin, US",
     "short_description": "Psychological recovery from injury",
-    "focus_tags": "juniors"
+    "focus_tags": "juniors",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Jean Cote",
@@ -441,7 +464,8 @@
     "city": "Kingston",
     "state": "Canada",
     "short_description": "Youth development",
-    "focus_tags": "talent identification"
+    "focus_tags": "talent identification",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Karin Moesch",
@@ -453,7 +477,8 @@
     "city": "Malmö",
     "state": "Sweden",
     "short_description": "Mental health in elite youth",
-    "focus_tags": "Soccer"
+    "focus_tags": "Soccer",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Alessandro Quartiroli",
@@ -465,7 +490,8 @@
     "city": "La Crosse",
     "state": "Wisconsin, US",
     "short_description": "US",
-    "focus_tags": "Practitioner self-care"
+    "focus_tags": "Practitioner self-care",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Linda Duffy",
@@ -477,7 +503,8 @@
     "city": "London",
     "state": "United Kingdom",
     "short_description": "Precision focus",
-    "focus_tags": "youth safety"
+    "focus_tags": "youth safety",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Mustafa Sarkar",
@@ -489,7 +516,8 @@
     "city": "Nottingham",
     "state": "United Kingdom",
     "short_description": "Resilience in high-performance youth",
-    "focus_tags": "psychological safety"
+    "focus_tags": "psychological safety",
+    "photo_filename": null
   },
   {
     "provider_name": "Alejandro Cubria",
@@ -501,7 +529,8 @@
     "city": "Houston",
     "state": "Texas, US",
     "short_description": "US",
-    "focus_tags": "Multicultural youth focus"
+    "focus_tags": "Multicultural youth focus",
+    "photo_filename": null
   },
   {
     "provider_name": "Yarlie Nicolas",
@@ -513,7 +542,8 @@
     "city": "Virtual",
     "state": "Texas, US",
     "short_description": "US",
-    "focus_tags": "Anxiety"
+    "focus_tags": "Anxiety",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Sarah Gerson",
@@ -525,7 +555,8 @@
     "city": "Cardiff",
     "state": "United Kingdom",
     "short_description": "Developmental psychologist looking at social motivation in youth sport.",
-    "focus_tags": "Social Motivation"
+    "focus_tags": "Social Motivation",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Lennie Waite",
@@ -537,7 +568,8 @@
     "city": "Houston",
     "state": "Texas, US",
     "short_description": "US",
-    "focus_tags": "Olympian and CMPC working with elite high school runners and endurance."
+    "focus_tags": "Olympian and CMPC working with elite high school runners and endurance.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Duncan Simpson",
@@ -549,7 +581,8 @@
     "city": "Bradenton",
     "state": "Florida, US",
     "short_description": "US",
-    "focus_tags": "Head of Mental Conditioning at IMG Academy; vast experience with elite juniors."
+    "focus_tags": "Head of Mental Conditioning at IMG Academy; vast experience with elite juniors.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Leah Lagos",
@@ -561,7 +594,8 @@
     "city": "New York",
     "state": "New York, US",
     "short_description": "US",
-    "focus_tags": "Biofeedback expert helping junior athletes control heart rate and nerves."
+    "focus_tags": "Biofeedback expert helping junior athletes control heart rate and nerves.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Peter Kadushin",
@@ -573,7 +607,8 @@
     "city": "Virtual",
     "state": "US",
     "short_description": "Mental performance coach for high school and collegiate competitors.",
-    "focus_tags": "Skill Acquisition"
+    "focus_tags": "Skill Acquisition",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. John F. Murray",
@@ -585,7 +620,8 @@
     "city": "Palm Beach",
     "state": "Florida, US",
     "short_description": "US",
-    "focus_tags": "Renowned for youth tennis mental prep and high-stakes junior tournaments."
+    "focus_tags": "Renowned for youth tennis mental prep and high-stakes junior tournaments.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Penny Werthner",
@@ -597,7 +633,8 @@
     "city": "Calgary",
     "state": "Alberta, Canada",
     "short_description": "CAN",
-    "focus_tags": "Pioneer in Canadian sport psychology; focuses on youth leadership in sport."
+    "focus_tags": "Pioneer in Canadian sport psychology; focuses on youth leadership in sport.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Sam Zizzi",
@@ -609,7 +646,8 @@
     "city": "Morgantown",
     "state": "West Virginia, US",
     "short_description": "US",
-    "focus_tags": "Expert in the psychological aspects of youth obesity and sport engagement."
+    "focus_tags": "Expert in the psychological aspects of youth obesity and sport engagement.",
+    "photo_filename": null
   },
   {
     "provider_name": "Maretha Claasen",
@@ -621,7 +659,8 @@
     "city": "Pretoria",
     "state": "South Africa",
     "short_description": "SASCOC-approved; worked with Olympians and junior golfers for 30 years.",
-    "focus_tags": "Junior Elite"
+    "focus_tags": "Junior Elite",
+    "photo_filename": null
   },
   {
     "provider_name": "Snezana Stoljarova",
@@ -633,19 +672,21 @@
     "city": "Tallinn",
     "state": "Estonia",
     "short_description": "FEPSAC certified; works on junior athlete identity and well-being.",
-    "focus_tags": "Identity"
+    "focus_tags": "Identity",
+    "photo_filename": null
   },
   {
     "provider_name": "Jannie Putter",
     "slug": "jannie-putter",
     "website_url": "https://www.jannieputter.co.za",
-    "primary_sport": "Rugby",
+    "primary_sport": "Multi-sport",
     "works_with_juniors": true,
     "offers_remote": true,
-    "city": "Johannesburg",
+    "city": "Pretoria",
     "state": "South Africa",
-    "short_description": "Mental coach for high school rugby programs and provincial youth teams.",
-    "focus_tags": "Mental Coach"
+    "short_description": "Mental coach, motivational speaker, and author specializing in parenting, coaching, and teamwork; works with athletes across multiple sports, available for online sessions globally.",
+    "focus_tags": "mental coach, motivational speaker, author, parenting, coaching, teamwork",
+    "photo_filename": null
   },
   {
     "provider_name": "Christian Zepp",
@@ -657,7 +698,8 @@
     "city": "Cologne",
     "state": "Germany",
     "short_description": "Expert in team dynamics and leadership for junior national teams.",
-    "focus_tags": "Team Dynamics"
+    "focus_tags": "Team Dynamics",
+    "photo_filename": null
   },
   {
     "provider_name": "Ashleigh Vilk",
@@ -669,7 +711,8 @@
     "city": "Virtual",
     "state": "Europe",
     "short_description": "Focuses on junior athlete mental well-being and life balance.",
-    "focus_tags": "Balance"
+    "focus_tags": "Balance",
+    "photo_filename": null
   },
   {
     "provider_name": "Michal Murarik",
@@ -681,7 +724,8 @@
     "city": "Virtual",
     "state": "Europe",
     "short_description": "Focuses on goal-setting and routine building for junior competitors.",
-    "focus_tags": "Routines"
+    "focus_tags": "Routines",
+    "photo_filename": null
   },
   {
     "provider_name": "Sara Biondi",
@@ -693,7 +737,8 @@
     "city": "Virtual",
     "state": "Italy",
     "short_description": "Specialist in adolescent emotional control in high-stakes sports.",
-    "focus_tags": "Emotional Control"
+    "focus_tags": "Emotional Control",
+    "photo_filename": null
   },
   {
     "provider_name": "Mark Schuls",
@@ -705,7 +750,8 @@
     "city": "Virtual",
     "state": "Netherlands",
     "short_description": "Focuses on \"The Thinking Athlete\" for junior Dutch talent.",
-    "focus_tags": "Cognitive"
+    "focus_tags": "Cognitive",
+    "photo_filename": null
   },
   {
     "provider_name": "Laur Nurkse",
@@ -717,7 +763,8 @@
     "city": "Virtual",
     "state": "Estonia",
     "short_description": "FEPSAC certified; works with young athletes on performance blocks.",
-    "focus_tags": "Blocks"
+    "focus_tags": "Blocks",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Mickaël Campo",
@@ -729,7 +776,8 @@
     "city": "Marcoussis",
     "state": "France",
     "short_description": "Mental performance lead for French Rugby; oversees youth national teams.",
-    "focus_tags": "Elite Youth"
+    "focus_tags": "Elite Youth",
+    "photo_filename": null
   },
   {
     "provider_name": "Nadine Debois",
@@ -741,7 +789,8 @@
     "city": "Paris",
     "state": "France",
     "short_description": "Senior specialist at INSEP; focus on dual-career (school/sport) for teens.",
-    "focus_tags": "Dual-Career"
+    "focus_tags": "Dual-Career",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Marc Zibung",
@@ -753,7 +802,8 @@
     "city": "Bern",
     "state": "Switzerland",
     "short_description": "Research and applied focus on junior talent identification in soccer.",
-    "focus_tags": "Talent ID"
+    "focus_tags": "Talent ID",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Claudia Zuber",
@@ -765,7 +815,8 @@
     "city": "Bern",
     "state": "Switzerland",
     "short_description": "Focuses on the developmental pathways of elite youth athletes.",
-    "focus_tags": "Pathways"
+    "focus_tags": "Pathways",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. James Hardy",
@@ -777,7 +828,8 @@
     "city": "Bangor",
     "state": "United Kingdom",
     "short_description": "Leading researcher on self-talk and its application for youth skill acq.",
-    "focus_tags": "Self-Talk"
+    "focus_tags": "Self-Talk",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Franco Noce",
@@ -789,7 +841,8 @@
     "city": "Belo Horizonte",
     "state": "Brazil",
     "short_description": "Expert in overtraining and burnout in Brazilian youth soccer academies.",
-    "focus_tags": "Overtraining"
+    "focus_tags": "Overtraining",
+    "photo_filename": null
   },
   {
     "provider_name": "Varley Teoldo da Costa",
@@ -801,7 +854,8 @@
     "city": "Belo Horizonte",
     "state": "Brazil",
     "short_description": "Focuses on tactical knowledge and decision-making in elite youth soccer.",
-    "focus_tags": "Decision-Making"
+    "focus_tags": "Decision-Making",
+    "photo_filename": null
   },
   {
     "provider_name": "Ciro Winckler",
@@ -813,7 +867,8 @@
     "city": "São Paulo",
     "state": "Brazil",
     "short_description": "Specialist in the developmental pathways of junior Paralympic athletes.",
-    "focus_tags": "Parasport"
+    "focus_tags": "Parasport",
+    "photo_filename": null
   },
   {
     "provider_name": "Ianina Tuñón",
@@ -825,7 +880,8 @@
     "city": "Buenos Aires",
     "state": "Argentina",
     "short_description": "Researcher on childhood development and sports participation in Argentina.",
-    "focus_tags": "Development"
+    "focus_tags": "Development",
+    "photo_filename": null
   },
   {
     "provider_name": "Becca Thomas",
@@ -837,7 +893,8 @@
     "city": "Bradenton",
     "state": "Florida, US",
     "short_description": "US",
-    "focus_tags": "Specialist in the \"Art of Teaching Mental Skills\" to elite youth residents."
+    "focus_tags": "Specialist in the \"Art of Teaching Mental Skills\" to elite youth residents.",
+    "photo_filename": null
   },
   {
     "provider_name": "Travis Dorsch",
@@ -849,7 +906,8 @@
     "city": "Logan",
     "state": "Utah, US",
     "short_description": "US",
-    "focus_tags": "Leading researcher on the \"Youth Sport Family\" and sibling dynamics."
+    "focus_tags": "Leading researcher on the \"Youth Sport Family\" and sibling dynamics.",
+    "photo_filename": null
   },
   {
     "provider_name": "Gareth J. Mole",
@@ -861,19 +919,8 @@
     "city": "Sydney",
     "state": "Australia",
     "short_description": "Founder of Condor; focuses on \"1-on-1\" mental toughness for juniors.",
-    "focus_tags": "Toughness"
-  },
-  {
-    "provider_name": "Dr. Jay-Lee Nair",
-    "slug": "dr-jay-lee-nair",
-    "website_url": "https://www.mentalnotespsych.com",
-    "primary_sport": "Multi-sport",
-    "works_with_juniors": true,
-    "offers_remote": true,
-    "city": "Singapore/AUS",
-    "state": "Specializes in youth performance anxiety and competitive preparation.",
-    "short_description": "Nerves",
-    "focus_tags": "Swimming"
+    "focus_tags": "Toughness",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. San-Fu Kao",
@@ -885,7 +932,8 @@
     "city": "Hsinchu",
     "state": "Taiwan",
     "short_description": "Expert in coach-leadership and its effect on junior athlete motivation.",
-    "focus_tags": "Leadership"
+    "focus_tags": "Leadership",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Amanda Visek",
@@ -897,7 +945,8 @@
     "city": "Washington",
     "state": "District of Columbia, US",
     "short_description": "Fun Integration Theory, youth engagement",
-    "focus_tags": "Creator of \"Fun Maps\" to increase youth athlete retention and joy."
+    "focus_tags": "Creator of \"Fun Maps\" to increase youth athlete retention and joy.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Scott Pierce",
@@ -909,7 +958,8 @@
     "city": "Normal",
     "state": "Illinois, US",
     "short_description": "US",
-    "focus_tags": "Expert in the transfer of life skills from youth sport to the real world."
+    "focus_tags": "Expert in the transfer of life skills from youth sport to the real world.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Anthony Amorose",
@@ -921,7 +971,8 @@
     "city": "Normal",
     "state": "Illinois, US",
     "short_description": "US",
-    "focus_tags": "Focuses on the \"Intrinsic Motivation\" levels of adolescent athletes."
+    "focus_tags": "Focuses on the \"Intrinsic Motivation\" levels of adolescent athletes.",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Tatiana Ryba",
@@ -933,7 +984,8 @@
     "city": "Jyväskylä",
     "state": "Finland",
     "short_description": "Leading expert on \"Cultural Sport Psychology\" and youth career paths.",
-    "focus_tags": "Cultural"
+    "focus_tags": "Cultural",
+    "photo_filename": null
   },
   {
     "provider_name": "Dr. Natalia Stambulova",
@@ -945,6 +997,7 @@
     "city": "Halmstad",
     "state": "Sweden",
     "short_description": "World leader in athlete career transitions (Junior-to-Senior).",
-    "focus_tags": "Transition"
+    "focus_tags": "Transition",
+    "photo_filename": null
   }
 ]

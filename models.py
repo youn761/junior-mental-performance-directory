@@ -14,6 +14,8 @@ class Provider(db.Model):
     website_url = db.Column(db.String(1024), nullable=True)
     email = db.Column(db.String(255), nullable=True)
 
+    photo_filename = db.Column(db.String(255), nullable=True)  # e.g. "jason-novetsky.jpg", lives in static/photos/
+
     primary_sport = db.Column(db.String(80), nullable=True)  # Golf, Multi-sport, etc.
     works_with_juniors = db.Column(db.Boolean, nullable=False, default=True)
     offers_remote = db.Column(db.Boolean, nullable=False, default=False)

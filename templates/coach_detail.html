@@ -5,6 +5,12 @@
 <a class="small" href="/coaches">← Back to directory</a>
 
 <div class="card">
+  {% if p.photo_filename %}
+    <img class="provider-photo" src="{{ url_for('static', filename='photos/' + p.photo_filename) }}" alt="{{ p.provider_name }}">
+  {% else %}
+    <div class="provider-photo provider-photo--placeholder" aria-hidden="true">{{ p.provider_name[:1] }}</div>
+  {% endif %}
+
   <h1>{{ p.provider_name }}</h1>
 
   <p class="small">
