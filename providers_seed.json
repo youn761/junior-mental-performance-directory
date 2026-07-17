@@ -10,7 +10,11 @@
     "state": "California, US",
     "short_description": "Olympic‑level sport psychologist and former elite triathlete providing video and in‑office mental coaching, including specialized programs for young athletes.drjoann​",
     "focus_tags": "Visualization, nerves, elite performance,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Mind Body Endurance – Telehealth Sport Psychologists",
@@ -23,7 +27,11 @@
     "state": "US",
     "short_description": "Group of sport psychologists offering telehealth to athletes across the US, including youth athlete mental health sessions and performance support.mindbodyendurance​",
     "focus_tags": "mental health, performance, well‑being,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Andrew Jacobs",
@@ -36,7 +44,11 @@
     "state": "Kansas, US",
     "short_description": "Veteran sport psychologist known for radio, consulting, and work with youth through professional athletes; provides individual sessions and remote work.winnersunlimited​",
     "focus_tags": "confidence, focus,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Aspire Mindset – Mental Performance Coaching for Youth & College Athletes",
@@ -49,7 +61,11 @@
     "state": "US",
     "short_description": "Short Description: Aspire Mindset provides mental performance coaching for youth and college athletes from a variety of sports through remote sessions, focusing on confidence, focus, and consistency under pressure.",
     "focus_tags": "focus, remote coaching,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Better Performance – Dr. Christina Heilman",
@@ -62,7 +78,11 @@
     "state": "Wyoming, US",
     "short_description": "Sport psychologist and coach integrating mental skills, positive psychology, and resilience work with youth through elite athletes.",
     "focus_tags": "resilience, enjoyment, fear of failure, mental toughness,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Compete Mentality – Dr. Haley Perlus",
@@ -75,7 +95,11 @@
     "state": "Colorado, US",
     "short_description": "Sport and performance psychologist offering one‑on‑one coaching and programs for youth and teen athletes and their parents via online sessions.",
     "focus_tags": "motivation, competitive mindset, nerves, consistency, parent education,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Champion Mindset Group – Dr. Jason Novetsky",
@@ -88,7 +112,11 @@
     "state": "Michigan, US",
     "short_description": "Dr. Jason Novetsky is the Founder of Champion Mindset Group, helping athletes, coaches, teams, and performers develop the mental skills to perform their best under pressure. Over 14+ years he has worked with professional athletes, 50+ NCAA Division I athletes, national champions, elite youth competitors, coaches, executives, and more. A former NCAA Division I All-Conference baseball pitcher (University of Detroit) and 25+ year school psychologist, he teaches athletes to think productively under pressure, regulate emotions, and build resilient identities.",
     "focus_tags": "confidence development, performance anxiety, pressure management, attention control, focus, emotional regulation, self-talk, competition routines, visualization, resilience, identity, injury rehab, leadership, team culture, parent education, college recruiting mindset, peak performance",
-    "photo_filename": "jason-novetsky.jpg"
+    "photo_filename": "jason-novetsky.jpg",
+    "phone": "586-206-6451",
+    "instagram_url": "https://www.instagram.com/champion_mindset_group",
+    "facebook_url": "https://www.facebook.com/share/195XrBKqeq/?mibextid=wwXIfr",
+    "street_address": "950 E. Maple, Suite 116"
   },
   {
     "provider_name": "Winning Within Sports Psychology – Dr. Chris Carr & Associates",
@@ -101,7 +129,11 @@
     "state": "Indiana, US",
     "short_description": "Sport psychology practice blending clinical and performance services for children, adolescents, and adult athletes.",
     "focus_tags": "Anxiety, depression, performance issues, injury, family, coping skills.,confidence, focus, golf, baseball, basketball, football, soccer, field hockey, hockey, softball",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Sari Shepphird",
@@ -114,7 +146,11 @@
     "state": "California, US",
     "short_description": "Body image, judged sports (dance/gymnastics)",
     "focus_tags": "Body image, judged sports (dance/gymnastics)",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Justin Ross",
@@ -127,7 +163,11 @@
     "state": "Colorado, US",
     "short_description": "Performance routines, teen athlete anxiety",
     "focus_tags": "Performance routines, teen athlete anxiety",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Cindra Kamphoff",
@@ -140,7 +180,11 @@
     "state": "Minnesota, US",
     "short_description": "Grit, leadership for young athletes",
     "focus_tags": "Grit, leadership for young athletes",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Matthew Flynn",
@@ -153,7 +197,11 @@
     "state": null,
     "short_description": "Clinical skills for high-achieving youth",
     "focus_tags": "Clinical skills for high-achieving youth",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Chris Carr",
@@ -166,7 +214,11 @@
     "state": "Indiana, US",
     "short_description": "Pacer’s team psych, youth clinical focus",
     "focus_tags": "Pacer’s team psych, youth clinical focus",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. R. Kweku Amoasi",
@@ -179,7 +231,11 @@
     "state": "Wisconsin, US",
     "short_description": "Trauma-informed youth performance",
     "focus_tags": "Trauma-informed youth performance",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "(414) 501-3622",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Caroline Silby",
@@ -192,7 +248,11 @@
     "state": "Maryland, US",
     "short_description": "High-pressure, US Figure Skating lead, elite youth",
     "focus_tags": "High-pressure, US Figure Skating lead, elite youth",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Robert Andrews",
@@ -205,7 +265,11 @@
     "state": "Texas, US",
     "short_description": "Trauma, Simone Biles’ consultant, youth mental blocks",
     "focus_tags": "Trauma, Simone Biles’ consultant, youth mental blocks",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Abby Keenan (Intrepid Performance)",
@@ -218,7 +282,11 @@
     "state": "Georgia, US",
     "short_description": "CMPC, military-style resilience for youth athletes",
     "focus_tags": "CMPC, military-style resilience for youth athletes",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Riley Nickols",
@@ -231,7 +299,11 @@
     "state": "Missouri, US",
     "short_description": "Eating disorders in youth sport, RED-S, endurance",
     "focus_tags": "Eating disorders in youth sport, RED-S, endurance",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Brian Hemmings",
@@ -244,7 +316,11 @@
     "state": "United Kingdom",
     "short_description": "Junior golf and cricket performance psychology",
     "focus_tags": "Junior golf and cricket performance psychology",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "07908 677660",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Prof. Chris Harwood",
@@ -257,7 +333,11 @@
     "state": "United Kingdom",
     "short_description": "Parent-athlete relationship, youth tennis specialist",
     "focus_tags": "Parent-athlete relationship, youth tennis specialist",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Vanessa Chafos",
@@ -270,7 +350,11 @@
     "state": "New Jersey, US",
     "short_description": "Youth goal setting, inner strength building",
     "focus_tags": "Youth goal setting, inner strength building",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Judy VanRaalte",
@@ -283,7 +367,11 @@
     "state": "Arizona, US",
     "short_description": "School/sport balance, performance anxiety",
     "focus_tags": "School/sport balance, performance anxiety",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Emily Marcinowski",
@@ -296,7 +384,11 @@
     "state": "Ohio, US",
     "short_description": "High school/JO travel volleyball focus",
     "focus_tags": "High school/JO travel volleyball focus",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Paul McCarthy",
@@ -309,7 +401,11 @@
     "state": "United Kingdom",
     "short_description": "Adolescent mistake management, regulation",
     "focus_tags": "Adolescent mistake management, regulation",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Andrew Lane",
@@ -322,7 +418,11 @@
     "state": "United Kingdom",
     "short_description": "Emotional regulation in junior endurance sport",
     "focus_tags": "Emotional regulation in junior endurance sport",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Dana Voelker",
@@ -335,7 +435,11 @@
     "state": "West Virginia, US",
     "short_description": "Body image",
     "focus_tags": "female youth athletes",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Nicole Detling",
@@ -348,7 +452,11 @@
     "state": "Utah, US",
     "short_description": "Olympic-bound juniors",
     "focus_tags": "fear/mental blocks",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Lindsey Hamilton",
@@ -361,7 +469,11 @@
     "state": "Florida, US",
     "short_description": "Elite academy development",
     "focus_tags": "mental toughness",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Jamie Shapiro",
@@ -374,7 +486,11 @@
     "state": "Colorado, US",
     "short_description": "Youth gymnastics",
     "focus_tags": "body image",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Jim Taylor",
@@ -387,7 +503,11 @@
     "state": "California, US",
     "short_description": "Prime Sport for youth/junior competitors",
     "focus_tags": null,
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Josephine Perry",
@@ -400,7 +520,11 @@
     "state": "United Kingdom",
     "short_description": "Youth endurance",
     "focus_tags": "anxiety",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Jennifer Carter",
@@ -413,7 +537,11 @@
     "state": "Ohio, US",
     "short_description": "Teen athlete mental health",
     "focus_tags": "eating disorders",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Graig Chow",
@@ -426,7 +554,11 @@
     "state": "California, US",
     "short_description": "Mental health integration for student-athletes",
     "focus_tags": null,
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Richard Gordin",
@@ -439,7 +571,11 @@
     "state": "Utah, US",
     "short_description": "Junior Olympic prep",
     "focus_tags": "concentration",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Monna Arvinen-Barrow",
@@ -452,7 +588,11 @@
     "state": "Wisconsin, US",
     "short_description": "Psychological recovery from injury",
     "focus_tags": "juniors",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Jean Cote",
@@ -465,7 +605,11 @@
     "state": "Canada",
     "short_description": "Youth development",
     "focus_tags": "talent identification",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Karin Moesch",
@@ -478,7 +622,11 @@
     "state": "Sweden",
     "short_description": "Mental health in elite youth",
     "focus_tags": "Soccer",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Alessandro Quartiroli",
@@ -491,7 +639,11 @@
     "state": "Wisconsin, US",
     "short_description": "US",
     "focus_tags": "Practitioner self-care",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Linda Duffy",
@@ -504,7 +656,11 @@
     "state": "United Kingdom",
     "short_description": "Precision focus",
     "focus_tags": "youth safety",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Mustafa Sarkar",
@@ -517,7 +673,11 @@
     "state": "United Kingdom",
     "short_description": "Resilience in high-performance youth",
     "focus_tags": "psychological safety",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Alejandro Cubria",
@@ -530,7 +690,11 @@
     "state": "Texas, US",
     "short_description": "US",
     "focus_tags": "Multicultural youth focus",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "(346) 209-0564",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Yarlie Nicolas",
@@ -543,7 +707,11 @@
     "state": "Texas, US",
     "short_description": "US",
     "focus_tags": "Anxiety",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "(954) 800-6303",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Sarah Gerson",
@@ -556,7 +724,11 @@
     "state": "United Kingdom",
     "short_description": "Developmental psychologist looking at social motivation in youth sport.",
     "focus_tags": "Social Motivation",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "+44 29208 70480",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Lennie Waite",
@@ -569,7 +741,11 @@
     "state": "Texas, US",
     "short_description": "US",
     "focus_tags": "Olympian and CMPC working with elite high school runners and endurance.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "713-364-3845",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Duncan Simpson",
@@ -582,7 +758,11 @@
     "state": "Florida, US",
     "short_description": "US",
     "focus_tags": "Head of Mental Conditioning at IMG Academy; vast experience with elite juniors.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "305-899-4890",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Leah Lagos",
@@ -595,7 +775,11 @@
     "state": "New York, US",
     "short_description": "US",
     "focus_tags": "Biofeedback expert helping junior athletes control heart rate and nerves.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Peter Kadushin",
@@ -608,7 +792,11 @@
     "state": "US",
     "short_description": "Mental performance coach for high school and collegiate competitors.",
     "focus_tags": "Skill Acquisition",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. John F. Murray",
@@ -621,7 +809,11 @@
     "state": "Florida, US",
     "short_description": "US",
     "focus_tags": "Renowned for youth tennis mental prep and high-stakes junior tournaments.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Penny Werthner",
@@ -634,7 +826,11 @@
     "state": "Alberta, Canada",
     "short_description": "CAN",
     "focus_tags": "Pioneer in Canadian sport psychology; focuses on youth leadership in sport.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Sam Zizzi",
@@ -647,7 +843,11 @@
     "state": "West Virginia, US",
     "short_description": "US",
     "focus_tags": "Expert in the psychological aspects of youth obesity and sport engagement.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Maretha Claasen",
@@ -660,7 +860,11 @@
     "state": "South Africa",
     "short_description": "SASCOC-approved; worked with Olympians and junior golfers for 30 years.",
     "focus_tags": "Junior Elite",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Snezana Stoljarova",
@@ -673,7 +877,11 @@
     "state": "Estonia",
     "short_description": "FEPSAC certified; works on junior athlete identity and well-being.",
     "focus_tags": "Identity",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Jannie Putter",
@@ -686,7 +894,11 @@
     "state": "South Africa",
     "short_description": "Mental coach, motivational speaker, and author specializing in parenting, coaching, and teamwork; works with athletes across multiple sports, available for online sessions globally.",
     "focus_tags": "mental coach, motivational speaker, author, parenting, coaching, teamwork",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "+27 83 291 0181",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Christian Zepp",
@@ -699,7 +911,11 @@
     "state": "Germany",
     "short_description": "Expert in team dynamics and leadership for junior national teams.",
     "focus_tags": "Team Dynamics",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "0177-2937822",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Ashleigh Vilk",
@@ -712,7 +928,11 @@
     "state": "Europe",
     "short_description": "Focuses on junior athlete mental well-being and life balance.",
     "focus_tags": "Balance",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Michal Murarik",
@@ -725,7 +945,11 @@
     "state": "Europe",
     "short_description": "Focuses on goal-setting and routine building for junior competitors.",
     "focus_tags": "Routines",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "0907 722 681",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Sara Biondi",
@@ -738,7 +962,11 @@
     "state": "Italy",
     "short_description": "Specialist in adolescent emotional control in high-stakes sports.",
     "focus_tags": "Emotional Control",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Mark Schuls",
@@ -751,7 +979,11 @@
     "state": "Netherlands",
     "short_description": "Focuses on \"The Thinking Athlete\" for junior Dutch talent.",
     "focus_tags": "Cognitive",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "+31 6 17387759",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Laur Nurkse",
@@ -764,7 +996,11 @@
     "state": "Estonia",
     "short_description": "FEPSAC certified; works with young athletes on performance blocks.",
     "focus_tags": "Blocks",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "+372 56507879",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Mickaël Campo",
@@ -777,7 +1013,11 @@
     "state": "France",
     "short_description": "Mental performance lead for French Rugby; oversees youth national teams.",
     "focus_tags": "Elite Youth",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Nadine Debois",
@@ -790,7 +1030,11 @@
     "state": "France",
     "short_description": "Senior specialist at INSEP; focus on dual-career (school/sport) for teens.",
     "focus_tags": "Dual-Career",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Marc Zibung",
@@ -803,7 +1047,11 @@
     "state": "Switzerland",
     "short_description": "Research and applied focus on junior talent identification in soccer.",
     "focus_tags": "Talent ID",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Claudia Zuber",
@@ -816,7 +1064,11 @@
     "state": "Switzerland",
     "short_description": "Focuses on the developmental pathways of elite youth athletes.",
     "focus_tags": "Pathways",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. James Hardy",
@@ -829,7 +1081,11 @@
     "state": "United Kingdom",
     "short_description": "Leading researcher on self-talk and its application for youth skill acq.",
     "focus_tags": "Self-Talk",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "(01248) 38 3493",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Franco Noce",
@@ -842,7 +1098,11 @@
     "state": "Brazil",
     "short_description": "Expert in overtraining and burnout in Brazilian youth soccer academies.",
     "focus_tags": "Overtraining",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "(31) 3409-2348",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Varley Teoldo da Costa",
@@ -855,7 +1115,11 @@
     "state": "Brazil",
     "short_description": "Focuses on tactical knowledge and decision-making in elite youth soccer.",
     "focus_tags": "Decision-Making",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "(31) 3409-2325",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Ciro Winckler",
@@ -868,7 +1132,11 @@
     "state": "Brazil",
     "short_description": "Specialist in the developmental pathways of junior Paralympic athletes.",
     "focus_tags": "Parasport",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Ianina Tuñón",
@@ -881,7 +1149,11 @@
     "state": "Argentina",
     "short_description": "Researcher on childhood development and sports participation in Argentina.",
     "focus_tags": "Development",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Becca Thomas",
@@ -894,7 +1166,11 @@
     "state": "Florida, US",
     "short_description": "US",
     "focus_tags": "Specialist in the \"Art of Teaching Mental Skills\" to elite youth residents.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": "UNCONFIRMED - inferred from org pattern",
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Travis Dorsch",
@@ -907,7 +1183,11 @@
     "state": "Utah, US",
     "short_description": "US",
     "focus_tags": "Leading researcher on the \"Youth Sport Family\" and sibling dynamics.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Gareth J. Mole",
@@ -920,7 +1200,11 @@
     "state": "Australia",
     "short_description": "Founder of Condor; focuses on \"1-on-1\" mental toughness for juniors.",
     "focus_tags": "Toughness",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. San-Fu Kao",
@@ -933,7 +1217,11 @@
     "state": "Taiwan",
     "short_description": "Expert in coach-leadership and its effect on junior athlete motivation.",
     "focus_tags": "Leadership",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Amanda Visek",
@@ -946,7 +1234,11 @@
     "state": "District of Columbia, US",
     "short_description": "Fun Integration Theory, youth engagement",
     "focus_tags": "Creator of \"Fun Maps\" to increase youth athlete retention and joy.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Scott Pierce",
@@ -959,7 +1251,11 @@
     "state": "Illinois, US",
     "short_description": "US",
     "focus_tags": "Expert in the transfer of life skills from youth sport to the real world.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Anthony Amorose",
@@ -972,7 +1268,11 @@
     "state": "Illinois, US",
     "short_description": "US",
     "focus_tags": "Focuses on the \"Intrinsic Motivation\" levels of adolescent athletes.",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Tatiana Ryba",
@@ -985,7 +1285,11 @@
     "state": "Finland",
     "short_description": "Leading expert on \"Cultural Sport Psychology\" and youth career paths.",
     "focus_tags": "Cultural",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   },
   {
     "provider_name": "Dr. Natalia Stambulova",
@@ -998,6 +1302,10 @@
     "state": "Sweden",
     "short_description": "World leader in athlete career transitions (Junior-to-Senior).",
     "focus_tags": "Transition",
-    "photo_filename": null
+    "photo_filename": null,
+    "phone": null,
+    "instagram_url": null,
+    "facebook_url": null,
+    "street_address": null
   }
 ]
