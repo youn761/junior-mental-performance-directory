@@ -165,6 +165,14 @@ def create_app():
             alters.append("ALTER TABLE providers ADD COLUMN expertise_tags VARCHAR(512)")
         if "photo_filename" not in cols:
             alters.append("ALTER TABLE providers ADD COLUMN photo_filename VARCHAR(255)")
+        if "phone" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN phone VARCHAR(40)")
+        if "instagram_url" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN instagram_url VARCHAR(512)")
+        if "facebook_url" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN facebook_url VARCHAR(512)")
+        if "street_address" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN street_address VARCHAR(255)")
 
         if alters:
             with db.engine.begin() as conn:
@@ -196,8 +204,9 @@ def create_app():
                     # Create Provider using only fields your model accepts
                     allowed = {
                         "provider_name", "slug", "website_url", "primary_sport", "works_with_juniors",
-                        "offers_remote", "city", "state", "short_description",
-                        "sport_tags", "problem_tags", "expertise_tags", "photo_filename"
+                        "offers_remote", "street_address", "city", "state", "short_description",
+                        "sport_tags", "problem_tags", "expertise_tags", "photo_filename",
+                        "phone", "instagram_url", "facebook_url"
                     }
                     clean_row = {k: v for k, v in row.items() if k in allowed}
 

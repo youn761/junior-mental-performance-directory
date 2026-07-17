@@ -45,6 +45,14 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
         "photo filename": "photo_filename",
         "photo": "photo_filename",
         "photo_filename": "photo_filename",
+        "phone": "phone",
+        "phone number": "phone",
+        "instagram": "instagram_url",
+        "instagram url": "instagram_url",
+        "facebook": "facebook_url",
+        "facebook url": "facebook_url",
+        "address": "street_address",
+        "street address": "street_address",
     }
 
     new_cols = {}
@@ -86,6 +94,10 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_na
         short_description = clean_str(row.get("short_description"))
         focus_tags = clean_str(row.get("focus_tags"))
         photo_filename = clean_str(row.get("photo_filename"))
+        phone = clean_str(row.get("phone"))
+        instagram_url = clean_str(row.get("instagram_url"))
+        facebook_url = clean_str(row.get("facebook_url"))
+        street_address = clean_str(row.get("street_address"))
 
         base_slug = slugify(name)
         slug = base_slug
@@ -107,6 +119,10 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_na
             "short_description": short_description,
             "focus_tags": focus_tags,
             "photo_filename": photo_filename,
+            "phone": phone,
+            "instagram_url": instagram_url,
+            "facebook_url": facebook_url,
+            "street_address": street_address,
         })
 
     with open(out_path, "w", encoding="utf-8") as f:

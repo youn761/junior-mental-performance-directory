@@ -13,6 +13,9 @@ class Provider(db.Model):
 
     website_url = db.Column(db.String(1024), nullable=True)
     email = db.Column(db.String(255), nullable=True)
+    phone = db.Column(db.String(40), nullable=True)
+    instagram_url = db.Column(db.String(512), nullable=True)
+    facebook_url = db.Column(db.String(512), nullable=True)
 
     photo_filename = db.Column(db.String(255), nullable=True)  # e.g. "jason-novetsky.jpg", lives in static/photos/
 
@@ -20,6 +23,7 @@ class Provider(db.Model):
     works_with_juniors = db.Column(db.Boolean, nullable=False, default=True)
     offers_remote = db.Column(db.Boolean, nullable=False, default=False)
 
+    street_address = db.Column(db.String(255), nullable=True)
     city = db.Column(db.String(120), nullable=True)
     state = db.Column(db.String(40), nullable=True)
 

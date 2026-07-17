@@ -19,8 +19,12 @@
     {% if p.offers_remote %}<span class="badge">Remote</span>{% endif %}
   </p>
 
-  {% if p.city or p.state %}
-    <p><strong>Location:</strong> {{ (p.city or '') }}{% if p.city and p.state %}, {% endif %}{{ (p.state or '') }}</p>
+  {% if p.street_address or p.city or p.state %}
+    <p><strong>Location:</strong> {% if p.street_address %}{{ p.street_address }}, {% endif %}{{ (p.city or '') }}{% if p.city and p.state %}, {% endif %}{{ (p.state or '') }}</p>
+  {% endif %}
+
+  {% if p.phone %}
+    <p><strong>Phone:</strong> <a href="tel:{{ p.phone }}">{{ p.phone }}</a></p>
   {% endif %}
 
   {% if p.short_description %}
@@ -58,8 +62,12 @@
     <p><strong>Focus areas:</strong> {{ p.focus_tags }}</p>
   {% endif %}
 
-  {% if p.website_url %}
-    <p><a class="btn" href="{{ p.website_url }}" target="_blank" rel="noopener">Visit Website</a></p>
+  {% if p.website_url or p.instagram_url or p.facebook_url %}
+    <p>
+      {% if p.website_url %}<a class="btn" href="{{ p.website_url }}" target="_blank" rel="noopener">Visit Website</a>{% endif %}
+      {% if p.instagram_url %}<a class="btn secondary" href="{{ p.instagram_url }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
+      {% if p.facebook_url %}<a class="btn secondary" href="{{ p.facebook_url }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
+    </p>
   {% endif %}
 </div>
 {% endblock %}
