@@ -14,7 +14,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Mind Body Endurance – Telehealth Sport Psychologists",
@@ -31,7 +32,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Andrew Jacobs",
@@ -48,7 +50,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Aspire Mindset – Mental Performance Coaching for Youth & College Athletes",
@@ -65,7 +68,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Better Performance – Dr. Christina Heilman",
@@ -82,7 +86,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Compete Mentality – Dr. Haley Perlus",
@@ -99,7 +104,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Champion Mindset Group – Dr. Jason Novetsky",
@@ -116,7 +122,8 @@
     "phone": "586-206-6451",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": true
   },
   {
     "provider_name": "Winning Within Sports Psychology – Dr. Chris Carr & Associates",
@@ -133,7 +140,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Sari Shepphird",
@@ -150,7 +158,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Justin Ross",
@@ -167,7 +176,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Cindra Kamphoff",
@@ -184,7 +194,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Matthew Flynn",
@@ -201,7 +212,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Chris Carr",
@@ -218,7 +230,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. R. Kweku Amoasi",
@@ -235,7 +248,8 @@
     "phone": "(414) 501-3622",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Caroline Silby",
@@ -252,7 +266,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Robert Andrews",
@@ -269,7 +284,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Abby Keenan (Intrepid Performance)",
@@ -286,7 +302,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Riley Nickols",
@@ -303,7 +320,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Brian Hemmings",
@@ -320,7 +338,8 @@
     "phone": "07908 677660",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Prof. Chris Harwood",
@@ -337,7 +356,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Vanessa Chafos",
@@ -354,7 +374,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Judy VanRaalte",
@@ -371,7 +392,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Emily Marcinowski",
@@ -388,7 +410,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Paul McCarthy",
@@ -405,7 +428,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Andrew Lane",
@@ -422,7 +446,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Dana Voelker",
@@ -439,7 +464,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Nicole Detling",
@@ -456,7 +482,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Lindsey Hamilton",
@@ -473,7 +500,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Jamie Shapiro",
@@ -490,7 +518,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Jim Taylor",
@@ -507,7 +536,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Josephine Perry",
@@ -524,7 +554,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Jennifer Carter",
@@ -541,7 +572,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Graig Chow",
@@ -558,7 +590,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Richard Gordin",
@@ -575,7 +608,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Monna Arvinen-Barrow",
@@ -592,7 +626,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Jean Cote",
@@ -609,7 +644,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Karin Moesch",
@@ -626,7 +662,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Alessandro Quartiroli",
@@ -643,7 +680,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Linda Duffy",
@@ -660,7 +698,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Mustafa Sarkar",
@@ -677,7 +716,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Alejandro Cubria",
@@ -694,7 +734,8 @@
     "phone": "(346) 209-0564",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Yarlie Nicolas",
@@ -711,7 +752,8 @@
     "phone": "(954) 800-6303",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Sarah Gerson",
@@ -728,7 +770,8 @@
     "phone": "+44 29208 70480",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Lennie Waite",
@@ -745,7 +788,8 @@
     "phone": "713-364-3845",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Duncan Simpson",
@@ -762,7 +806,8 @@
     "phone": "305-899-4890",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Leah Lagos",
@@ -779,7 +824,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. John F. Murray",
@@ -796,7 +842,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Penny Werthner",
@@ -813,7 +860,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Sam Zizzi",
@@ -830,7 +878,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Maretha Claasen",
@@ -847,7 +896,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Jannie Putter",
@@ -864,7 +914,8 @@
     "phone": "+27 83 291 0181",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": true
   },
   {
     "provider_name": "Christian Zepp",
@@ -881,7 +932,8 @@
     "phone": "0177-2937822",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Ashleigh Vilk",
@@ -898,7 +950,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Michal Murarik",
@@ -915,7 +968,8 @@
     "phone": "0907 722 681",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Sara Biondi",
@@ -932,7 +986,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Mark Schuls",
@@ -949,7 +1004,8 @@
     "phone": "+31 6 17387759",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Laur Nurkse",
@@ -966,7 +1022,8 @@
     "phone": "+372 56507879",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Mickaël Campo",
@@ -983,7 +1040,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Nadine Debois",
@@ -1000,7 +1058,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Marc Zibung",
@@ -1017,7 +1076,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Claudia Zuber",
@@ -1034,7 +1094,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. James Hardy",
@@ -1051,7 +1112,8 @@
     "phone": "(01248) 38 3493",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Franco Noce",
@@ -1068,7 +1130,8 @@
     "phone": "(31) 3409-2348",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Varley Teoldo da Costa",
@@ -1085,7 +1148,8 @@
     "phone": "(31) 3409-2325",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Ciro Winckler",
@@ -1102,7 +1166,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Ianina Tuñón",
@@ -1119,7 +1184,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Becca Thomas",
@@ -1136,7 +1202,8 @@
     "phone": "UNCONFIRMED - inferred from org pattern",
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Travis Dorsch",
@@ -1153,7 +1220,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Gareth J. Mole",
@@ -1170,7 +1238,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. San-Fu Kao",
@@ -1187,7 +1256,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Amanda Visek",
@@ -1204,7 +1274,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Scott Pierce",
@@ -1221,7 +1292,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Anthony Amorose",
@@ -1238,7 +1310,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Tatiana Ryba",
@@ -1255,7 +1328,8 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   },
   {
     "provider_name": "Dr. Natalia Stambulova",
@@ -1272,6 +1346,7 @@
     "phone": null,
     "instagram_url": null,
     "facebook_url": null,
-    "street_address": null
+    "street_address": null,
+    "featured": false
   }
 ]

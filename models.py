@@ -22,6 +22,7 @@ class Provider(db.Model):
     primary_sport = db.Column(db.String(80), nullable=True)  # Golf, Multi-sport, etc.
     works_with_juniors = db.Column(db.Boolean, nullable=False, default=True)
     offers_remote = db.Column(db.Boolean, nullable=False, default=False)
+    featured = db.Column(db.Boolean, nullable=False, default=False)
 
     street_address = db.Column(db.String(255), nullable=True)
     city = db.Column(db.String(120), nullable=True)

@@ -173,6 +173,8 @@ def create_app():
             alters.append("ALTER TABLE providers ADD COLUMN facebook_url VARCHAR(512)")
         if "street_address" not in cols:
             alters.append("ALTER TABLE providers ADD COLUMN street_address VARCHAR(255)")
+        if "featured" not in cols:
+            alters.append("ALTER TABLE providers ADD COLUMN featured BOOLEAN DEFAULT 0")
 
         if alters:
             with db.engine.begin() as conn:
@@ -206,7 +208,7 @@ def create_app():
                         "provider_name", "slug", "website_url", "primary_sport", "works_with_juniors",
                         "offers_remote", "street_address", "city", "state", "short_description",
                         "sport_tags", "problem_tags", "expertise_tags", "photo_filename",
-                        "phone", "instagram_url", "facebook_url"
+                        "phone", "instagram_url", "facebook_url", "featured"
                     }
                     clean_row = {k: v for k, v in row.items() if k in allowed}
 
@@ -276,7 +278,7 @@ def create_app():
             if expertise:
                 q = q.filter(Provider.expertise_tags.ilike(f"%{expertise}%"))
 
-        providers = q.order_by(Provider.provider_name.asc()).all()
+        providers = q.order_by(Provider.featured.desc(), Provider.provider_name.asc()).all()
 
         # Build filter options from DB (only juniors-first providers)
         def unique_sorted(items):

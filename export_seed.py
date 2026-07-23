@@ -53,6 +53,7 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
         "facebook url": "facebook_url",
         "address": "street_address",
         "street address": "street_address",
+        "featured": "featured",
     }
 
     new_cols = {}
@@ -88,6 +89,7 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_na
 
         works_with_juniors = to_bool(row.get("works_with_juniors", "Y"), default=True)
         offers_remote = to_bool(row.get("offers_remote", "N"), default=False)
+        featured = to_bool(row.get("featured", "N"), default=False)
 
         city = clean_str(row.get("city"))
         state = clean_str(row.get("state"))
@@ -123,6 +125,7 @@ def export_seed(excel_path: str, out_path: str = "providers_seed.json", sheet_na
             "instagram_url": instagram_url,
             "facebook_url": facebook_url,
             "street_address": street_address,
+            "featured": featured,
         })
 
     with open(out_path, "w", encoding="utf-8") as f:
